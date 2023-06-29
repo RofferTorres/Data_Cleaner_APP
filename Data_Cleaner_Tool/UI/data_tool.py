@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'data_toolsXuFxg.ui'
+## Form generated from reading UI file 'data_toolbwCDnQ.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.5.1
 ##
@@ -603,19 +603,20 @@ class Ui_MainWindow(object):
         self.horizontalLayout_2.setSpacing(0)
         self.horizontalLayout_2.setObjectName(u"horizontalLayout_2")
         self.horizontalLayout_2.setContentsMargins(0, 0, 0, 0)
-        self.frame_4 = QFrame(self.headerContainer)
-        self.frame_4.setObjectName(u"frame_4")
+        self.leftHeaderSection = QFrame(self.headerContainer)
+        self.leftHeaderSection.setObjectName(u"leftHeaderSection")
+        self.leftHeaderSection.setEnabled(True)
         font1 = QFont()
         font1.setFamilies([u"Arial Narrow"])
         font1.setPointSize(12)
-        self.frame_4.setFont(font1)
-        self.frame_4.setFrameShape(QFrame.StyledPanel)
-        self.frame_4.setFrameShadow(QFrame.Raised)
-        self.horizontalLayout_5 = QHBoxLayout(self.frame_4)
+        self.leftHeaderSection.setFont(font1)
+        self.leftHeaderSection.setFrameShape(QFrame.StyledPanel)
+        self.leftHeaderSection.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_5 = QHBoxLayout(self.leftHeaderSection)
         self.horizontalLayout_5.setSpacing(0)
         self.horizontalLayout_5.setObjectName(u"horizontalLayout_5")
         self.horizontalLayout_5.setContentsMargins(0, 0, 0, 0)
-        self.MenuBtn_2 = QPushButton(self.frame_4)
+        self.MenuBtn_2 = QPushButton(self.leftHeaderSection)
         self.MenuBtn_2.setObjectName(u"MenuBtn_2")
         sizePolicy = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
@@ -634,15 +635,65 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_5.addWidget(self.MenuBtn_2)
 
-        self.label = QLabel(self.frame_4)
-        self.label.setObjectName(u"label")
-        self.label.setAlignment(Qt.AlignCenter)
-        self.label.setMargin(9)
 
-        self.horizontalLayout_5.addWidget(self.label)
+        self.horizontalLayout_2.addWidget(self.leftHeaderSection, 0, Qt.AlignLeft)
+
+        self.centralHeaderSection = QFrame(self.headerContainer)
+        self.centralHeaderSection.setObjectName(u"centralHeaderSection")
+        self.centralHeaderSection.setFrameShape(QFrame.StyledPanel)
+        self.centralHeaderSection.setFrameShadow(QFrame.Raised)
+        self.verticalLayout = QVBoxLayout(self.centralHeaderSection)
+        self.verticalLayout.setSpacing(0)
+        self.verticalLayout.setObjectName(u"verticalLayout")
+        self.verticalLayout.setContentsMargins(0, 0, 0, 0)
+        self.windowsMainTitle_2 = QLabel(self.centralHeaderSection)
+        self.windowsMainTitle_2.setObjectName(u"windowsMainTitle_2")
+        font3 = QFont()
+        font3.setPointSize(11)
+        self.windowsMainTitle_2.setFont(font3)
+        self.windowsMainTitle_2.setAlignment(Qt.AlignCenter)
+        self.windowsMainTitle_2.setMargin(9)
+
+        self.verticalLayout.addWidget(self.windowsMainTitle_2)
 
 
-        self.horizontalLayout_2.addWidget(self.frame_4, 0, Qt.AlignLeft)
+        self.horizontalLayout_2.addWidget(self.centralHeaderSection)
+
+        self.systemBtns = QFrame(self.headerContainer)
+        self.systemBtns.setObjectName(u"systemBtns")
+        self.systemBtns.setFrameShape(QFrame.StyledPanel)
+        self.systemBtns.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_6 = QHBoxLayout(self.systemBtns)
+        self.horizontalLayout_6.setSpacing(4)
+        self.horizontalLayout_6.setObjectName(u"horizontalLayout_6")
+        self.horizontalLayout_6.setContentsMargins(0, 0, 4, 0)
+        self.closeBtn = QPushButton(self.systemBtns)
+        self.closeBtn.setObjectName(u"closeBtn")
+        icon1 = QIcon()
+        icon1.addFile(u":/icons/icons/macos-close-30.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.closeBtn.setIcon(icon1)
+        self.closeBtn.setIconSize(QSize(16, 16))
+
+        self.horizontalLayout_6.addWidget(self.closeBtn)
+
+        self.minimizeBtn = QPushButton(self.systemBtns)
+        self.minimizeBtn.setObjectName(u"minimizeBtn")
+        icon2 = QIcon()
+        icon2.addFile(u":/icons/icons/macos-minimize-30.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.minimizeBtn.setIcon(icon2)
+
+        self.horizontalLayout_6.addWidget(self.minimizeBtn)
+
+        self.restoreBtn = QPushButton(self.systemBtns)
+        self.restoreBtn.setObjectName(u"restoreBtn")
+        icon3 = QIcon()
+        icon3.addFile(u":/icons/icons/macos-full-screen-30.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.restoreBtn.setIcon(icon3)
+
+        self.horizontalLayout_6.addWidget(self.restoreBtn)
+
+
+        self.horizontalLayout_2.addWidget(self.systemBtns, 0, Qt.AlignRight)
 
 
         self.verticalLayout_11.addWidget(self.headerContainer)
@@ -683,9 +734,9 @@ class Ui_MainWindow(object):
         self.homeBtn_2.setObjectName(u"homeBtn_2")
         self.homeBtn_2.setMinimumSize(QSize(0, 28))
         self.homeBtn_2.setFont(font2)
-        icon1 = QIcon()
-        icon1.addFile(u":/icons/icons/home.svg", QSize(), QIcon.Normal, QIcon.Off)
-        self.homeBtn_2.setIcon(icon1)
+        icon4 = QIcon()
+        icon4.addFile(u":/icons/icons/home.svg", QSize(), QIcon.Normal, QIcon.Off)
+        self.homeBtn_2.setIcon(icon4)
         self.homeBtn_2.setIconSize(QSize(24, 24))
 
         self.verticalLayout_9.addWidget(self.homeBtn_2)
@@ -694,9 +745,9 @@ class Ui_MainWindow(object):
         self.settingBtn_2.setObjectName(u"settingBtn_2")
         self.settingBtn_2.setMinimumSize(QSize(0, 28))
         self.settingBtn_2.setFont(font2)
-        icon2 = QIcon()
-        icon2.addFile(u":/icons/icons/settings.svg", QSize(), QIcon.Normal, QIcon.Off)
-        self.settingBtn_2.setIcon(icon2)
+        icon5 = QIcon()
+        icon5.addFile(u":/icons/icons/settings.svg", QSize(), QIcon.Normal, QIcon.Off)
+        self.settingBtn_2.setIcon(icon5)
         self.settingBtn_2.setIconSize(QSize(24, 24))
 
         self.verticalLayout_9.addWidget(self.settingBtn_2)
@@ -705,9 +756,9 @@ class Ui_MainWindow(object):
         self.previewBtn_2.setObjectName(u"previewBtn_2")
         self.previewBtn_2.setMinimumSize(QSize(0, 28))
         self.previewBtn_2.setFont(font2)
-        icon3 = QIcon()
-        icon3.addFile(u":/icons/icons/table.svg", QSize(), QIcon.Normal, QIcon.Off)
-        self.previewBtn_2.setIcon(icon3)
+        icon6 = QIcon()
+        icon6.addFile(u":/icons/icons/table.svg", QSize(), QIcon.Normal, QIcon.Off)
+        self.previewBtn_2.setIcon(icon6)
         self.previewBtn_2.setIconSize(QSize(24, 24))
 
         self.verticalLayout_9.addWidget(self.previewBtn_2)
@@ -731,9 +782,9 @@ class Ui_MainWindow(object):
         self.themeBtn_2.setObjectName(u"themeBtn_2")
         self.themeBtn_2.setMinimumSize(QSize(0, 28))
         self.themeBtn_2.setFont(font2)
-        icon4 = QIcon()
-        icon4.addFile(u":/icons/icons/sun.svg", QSize(), QIcon.Normal, QIcon.Off)
-        self.themeBtn_2.setIcon(icon4)
+        icon7 = QIcon()
+        icon7.addFile(u":/icons/icons/sun.svg", QSize(), QIcon.Normal, QIcon.Off)
+        self.themeBtn_2.setIcon(icon7)
         self.themeBtn_2.setIconSize(QSize(24, 24))
 
         self.verticalLayout_10.addWidget(self.themeBtn_2)
@@ -742,9 +793,9 @@ class Ui_MainWindow(object):
         self.infoBtn_2.setObjectName(u"infoBtn_2")
         self.infoBtn_2.setMinimumSize(QSize(0, 28))
         self.infoBtn_2.setFont(font2)
-        icon5 = QIcon()
-        icon5.addFile(u":/icons/icons/info.svg", QSize(), QIcon.Normal, QIcon.Off)
-        self.infoBtn_2.setIcon(icon5)
+        icon8 = QIcon()
+        icon8.addFile(u":/icons/icons/info.svg", QSize(), QIcon.Normal, QIcon.Off)
+        self.infoBtn_2.setIcon(icon8)
         self.infoBtn_2.setIconSize(QSize(24, 24))
 
         self.verticalLayout_10.addWidget(self.infoBtn_2)
@@ -753,9 +804,9 @@ class Ui_MainWindow(object):
         self.helpBtn_2.setObjectName(u"helpBtn_2")
         self.helpBtn_2.setMinimumSize(QSize(0, 28))
         self.helpBtn_2.setFont(font2)
-        icon6 = QIcon()
-        icon6.addFile(u":/icons/icons/help-circle.svg", QSize(), QIcon.Normal, QIcon.Off)
-        self.helpBtn_2.setIcon(icon6)
+        icon9 = QIcon()
+        icon9.addFile(u":/icons/icons/help-circle.svg", QSize(), QIcon.Normal, QIcon.Off)
+        self.helpBtn_2.setIcon(icon9)
         self.helpBtn_2.setIconSize(QSize(24, 24))
 
         self.verticalLayout_10.addWidget(self.helpBtn_2)
@@ -806,21 +857,21 @@ class Ui_MainWindow(object):
         self.horizontalLayout_3.setContentsMargins(-1, 1, -1, 4)
         self.labelFooterLeft = QLabel(self.footerContainer)
         self.labelFooterLeft.setObjectName(u"labelFooterLeft")
-        font3 = QFont()
-        font3.setPointSize(9)
-        self.labelFooterLeft.setFont(font3)
+        font4 = QFont()
+        font4.setPointSize(9)
+        self.labelFooterLeft.setFont(font4)
 
         self.horizontalLayout_3.addWidget(self.labelFooterLeft, 0, Qt.AlignLeft|Qt.AlignVCenter)
 
         self.labelFooterCenter = QLabel(self.footerContainer)
         self.labelFooterCenter.setObjectName(u"labelFooterCenter")
-        self.labelFooterCenter.setFont(font3)
+        self.labelFooterCenter.setFont(font4)
 
         self.horizontalLayout_3.addWidget(self.labelFooterCenter, 0, Qt.AlignHCenter|Qt.AlignVCenter)
 
         self.labelFooterRight = QLabel(self.footerContainer)
         self.labelFooterRight.setObjectName(u"labelFooterRight")
-        self.labelFooterRight.setFont(font3)
+        self.labelFooterRight.setFont(font4)
 
         self.horizontalLayout_3.addWidget(self.labelFooterRight, 0, Qt.AlignRight|Qt.AlignVCenter)
 
@@ -840,7 +891,10 @@ class Ui_MainWindow(object):
         self.MenuBtn_2.setToolTip(QCoreApplication.translate("MainWindow", u"Menu", None))
 #endif // QT_CONFIG(tooltip)
         self.MenuBtn_2.setText("")
-        self.label.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
+        self.windowsMainTitle_2.setText(QCoreApplication.translate("MainWindow", u"Data Cleaner Tool v0.1a", None))
+        self.closeBtn.setText("")
+        self.minimizeBtn.setText("")
+        self.restoreBtn.setText("")
 #if QT_CONFIG(tooltip)
         self.homeBtn_2.setToolTip(QCoreApplication.translate("MainWindow", u"Home", None))
 #endif // QT_CONFIG(tooltip)
