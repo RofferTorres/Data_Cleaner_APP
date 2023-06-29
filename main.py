@@ -18,4 +18,3 @@ if __name__ == '__main__':
     app = QApplication(sys.argv)
     window = Data_Tool_Application()
     sys.exit(app.exec())
-    print('random')
