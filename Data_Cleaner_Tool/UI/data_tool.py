@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'data_toolbwCDnQ.ui'
+## Form generated from reading UI file 'data_toolozKDZL.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.5.1
 ##
@@ -30,7 +30,8 @@ class Ui_MainWindow(object):
         font.setFamilies([u"Calibri"])
         font.setPointSize(11)
         MainWindow.setFont(font)
-        MainWindow.setStyleSheet(u"#MenuBtn{\n"
+        MainWindow.setStyleSheet(u"\n"
+"#MenuBtn{\n"
 "	border:none;\n"
 "	background-color:transparent;\n"
 "	background:none;\n"
@@ -85,8 +86,8 @@ class Ui_MainWindow(object):
 "\n"
 "QMenuBar::item:pressed \n"
 "{\n"
-"	background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1,"
-                        " stop:0 rgba(89, 89, 89, 255),stop:1 rgba(66, 66, 66, 255));\n"
+"	background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, "
+                        "y2:1, stop:0 rgba(89, 89, 89, 255),stop:1 rgba(66, 66, 66, 255));\n"
 "	border: 1px solid #000;\n"
 "	color: #fff;\n"
 "\n"
@@ -135,9 +136,9 @@ class Ui_MainWindow(object):
 "	background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(83, 83, 83, 255),stop:0.293269 rgba(81, 81, 81, 255),stop:0.634615 rgba(79, 79, 79, 255),stop:1 rgba(83, 83, 83, 255));\n"
 "	border-top: none;\n"
 "	border-bottom: 1px solid #343434;\n"
-"	border-left: 1px solid #343434;\n"
-""
-                        "	border-right: 1px solid #343434;\n"
+"	border-left: 1px solid #34343"
+                        "4;\n"
+"	border-right: 1px solid #343434;\n"
 "\n"
 "}\n"
 "\n"
@@ -198,8 +199,8 @@ class Ui_MainWindow(object):
 "\n"
 "\n"
 "/*-----QDockWidget-----*/\n"
-"QDoc"
-                        "kWidget\n"
+""
+                        "QDockWidget\n"
 "{\n"
 "	color: #eee;\n"
 "	font-weight: bold;\n"
@@ -249,8 +250,8 @@ class Ui_MainWindow(object):
 "}\n"
 "\n"
 "\n"
-"QDo"
-                        "ckWidget::float-button:hover\n"
+""
+                        "QDockWidget::float-button:hover\n"
 "{\n"
 "	border: none;\n"
 "	background-color: none;\n"
@@ -307,9 +308,9 @@ class Ui_MainWindow(object):
 "{\n"
 "	background-color: #252525;\n"
 "    width: 16px; \n"
-"    border-width: 1px;\n"
-""
-                        "\n"
+"    border-width: 1px"
+                        ";\n"
+"\n"
 "}\n"
 "\n"
 "\n"
@@ -365,8 +366,8 @@ class Ui_MainWindow(object):
 "/*-----QListView-----*/\n"
 "QListView \n"
 "{\n"
-"	background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(83, 83, 83, 255),stop:0.293"
-                        "269 rgba(81, 81, 81, 255),stop:0.634615 rgba(79, 79, 79, 255),stop:1 rgba(83, 83, 83, 255));\n"
+"	background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(83, 83, 83, 255),stop"
+                        ":0.293269 rgba(81, 81, 81, 255),stop:0.634615 rgba(79, 79, 79, 255),stop:1 rgba(83, 83, 83, 255));\n"
 "    border : none;\n"
 "    color: white;\n"
 "    show-decoration-selected: 1; \n"
@@ -426,9 +427,9 @@ class Ui_MainWindow(object):
 "}\n"
 "\n"
 "\n"
-"QListView::item:hover {\n"
-""
-                        "    background-color: #262626;\n"
+"QListView::item:hover "
+                        "{\n"
+"    background-color: #262626;\n"
 "    border: none;\n"
 "    color: white;\n"
 "\n"
@@ -477,9 +478,9 @@ class Ui_MainWindow(object):
 "\n"
 "\n"
 "QScrollBar::right-arrow:horizontal\n"
-"{\n"
 ""
-                        "    image: url(://arrow-right.png);\n"
+                        "{\n"
+"    image: url(://arrow-right.png);\n"
 "    width: 6px;\n"
 "    height: 6px;\n"
 "\n"
@@ -530,10 +531,10 @@ class Ui_MainWindow(object):
 "    subcontrol-origin: margin;\n"
 "\n"
 "}\n"
-"\n"
-"\n"
 ""
-                        "QScrollBar::sub-line:vertical\n"
+                        "\n"
+"\n"
+"QScrollBar::sub-line:vertical\n"
 "{\n"
 "    border: 1px solid #3d3d3d;\n"
 "    background-color: #3d3d3d;\n"
@@ -582,8 +583,8 @@ class Ui_MainWindow(object):
 "/*-----QSizeGrip-----*/\n"
 "QSizeGrip \n"
 "{\n"
-"	background-color: ima"
-                        "ge(\"./ressources/sizegrip.png\"); /*To replace*/\n"
+"	background-"
+                        "color: image(\"./ressources/sizegrip.png\"); /*To replace*/\n"
 "	border: none;\n"
 "\n"
 "}\n"
@@ -664,15 +665,20 @@ class Ui_MainWindow(object):
         self.systemBtns.setFrameShape(QFrame.StyledPanel)
         self.systemBtns.setFrameShadow(QFrame.Raised)
         self.horizontalLayout_6 = QHBoxLayout(self.systemBtns)
-        self.horizontalLayout_6.setSpacing(4)
         self.horizontalLayout_6.setObjectName(u"horizontalLayout_6")
-        self.horizontalLayout_6.setContentsMargins(0, 0, 4, 0)
+        self.horizontalLayout_6.setContentsMargins(-1, -1, 6, -1)
         self.closeBtn = QPushButton(self.systemBtns)
         self.closeBtn.setObjectName(u"closeBtn")
         icon1 = QIcon()
         icon1.addFile(u":/icons/icons/macos-close-30.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon1.addFile(u":/icons/icons/macos-close-30.png", QSize(), QIcon.Normal, QIcon.On)
+        icon1.addFile(u":/icons/icons/hover-macos-close-30.png", QSize(), QIcon.Active, QIcon.On)
         self.closeBtn.setIcon(icon1)
         self.closeBtn.setIconSize(QSize(16, 16))
+        self.closeBtn.setCheckable(True)
+        self.closeBtn.setChecked(False)
+        self.closeBtn.setAutoRepeat(False)
+        self.closeBtn.setAutoRepeatDelay(10)
 
         self.horizontalLayout_6.addWidget(self.closeBtn)
 
@@ -680,7 +686,12 @@ class Ui_MainWindow(object):
         self.minimizeBtn.setObjectName(u"minimizeBtn")
         icon2 = QIcon()
         icon2.addFile(u":/icons/icons/macos-minimize-30.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon2.addFile(u":/icons/icons/macos-minimize-30.png", QSize(), QIcon.Normal, QIcon.On)
+        icon2.addFile(u":/icons/icons/hover-macos-minimize-30.png", QSize(), QIcon.Active, QIcon.On)
         self.minimizeBtn.setIcon(icon2)
+        self.minimizeBtn.setIconSize(QSize(16, 16))
+        self.minimizeBtn.setCheckable(True)
+        self.minimizeBtn.setAutoDefault(False)
 
         self.horizontalLayout_6.addWidget(self.minimizeBtn)
 
@@ -688,7 +699,11 @@ class Ui_MainWindow(object):
         self.restoreBtn.setObjectName(u"restoreBtn")
         icon3 = QIcon()
         icon3.addFile(u":/icons/icons/macos-full-screen-30.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon3.addFile(u":/icons/icons/macos-full-screen-30.png", QSize(), QIcon.Normal, QIcon.On)
+        icon3.addFile(u":/icons/icons/hover-macos-full-screen-30.png", QSize(), QIcon.Active, QIcon.On)
         self.restoreBtn.setIcon(icon3)
+        self.restoreBtn.setIconSize(QSize(16, 16))
+        self.restoreBtn.setCheckable(True)
 
         self.horizontalLayout_6.addWidget(self.restoreBtn)
 

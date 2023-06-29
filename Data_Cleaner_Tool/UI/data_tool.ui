@@ -26,7 +26,8 @@
    <string>Data Cleaner Tool v0.1a</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">#MenuBtn{
+   <string notr="true">
+#MenuBtn{
 	border:none;
 	background-color:transparent;
 	background:none;
@@ -745,20 +746,8 @@ QSizeGrip
           <enum>QFrame::Raised</enum>
          </property>
          <layout class="QHBoxLayout" name="horizontalLayout_6">
-          <property name="spacing">
-           <number>4</number>
-          </property>
-          <property name="leftMargin">
-           <number>0</number>
-          </property>
-          <property name="topMargin">
-           <number>0</number>
-          </property>
           <property name="rightMargin">
-           <number>4</number>
-          </property>
-          <property name="bottomMargin">
-           <number>0</number>
+           <number>6</number>
           </property>
           <item>
            <widget class="QPushButton" name="closeBtn">
@@ -767,13 +756,27 @@ QSizeGrip
             </property>
             <property name="icon">
              <iconset resource="../../resource.qrc">
-              <normaloff>:/icons/icons/macos-close-30.png</normaloff>:/icons/icons/macos-close-30.png</iconset>
+              <normaloff>:/icons/icons/macos-close-30.png</normaloff>
+              <normalon>:/icons/icons/macos-close-30.png</normalon>
+              <activeon>:/icons/icons/hover-macos-close-30.png</activeon>:/icons/icons/macos-close-30.png</iconset>
             </property>
             <property name="iconSize">
              <size>
               <width>16</width>
               <height>16</height>
              </size>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+            <property name="checked">
+             <bool>false</bool>
+            </property>
+            <property name="autoRepeat">
+             <bool>false</bool>
+            </property>
+            <property name="autoRepeatDelay">
+             <number>10</number>
             </property>
            </widget>
           </item>
@@ -784,7 +787,21 @@ QSizeGrip
             </property>
             <property name="icon">
              <iconset resource="../../resource.qrc">
-              <normaloff>:/icons/icons/macos-minimize-30.png</normaloff>:/icons/icons/macos-minimize-30.png</iconset>
+              <normaloff>:/icons/icons/macos-minimize-30.png</normaloff>
+              <normalon>:/icons/icons/macos-minimize-30.png</normalon>
+              <activeon>:/icons/icons/hover-macos-minimize-30.png</activeon>:/icons/icons/macos-minimize-30.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>16</width>
+              <height>16</height>
+             </size>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+            <property name="autoDefault">
+             <bool>false</bool>
             </property>
            </widget>
           </item>
@@ -795,7 +812,18 @@ QSizeGrip
             </property>
             <property name="icon">
              <iconset resource="../../resource.qrc">
-              <normaloff>:/icons/icons/macos-full-screen-30.png</normaloff>:/icons/icons/macos-full-screen-30.png</iconset>
+              <normaloff>:/icons/icons/macos-full-screen-30.png</normaloff>
+              <normalon>:/icons/icons/macos-full-screen-30.png</normalon>
+              <activeon>:/icons/icons/hover-macos-full-screen-30.png</activeon>:/icons/icons/macos-full-screen-30.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>16</width>
+              <height>16</height>
+             </size>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
             </property>
            </widget>
           </item>
