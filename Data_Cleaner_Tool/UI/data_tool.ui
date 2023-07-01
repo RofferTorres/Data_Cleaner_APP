@@ -585,8 +585,11 @@ QSizeGrip
     <property name="spacing">
      <number>2</number>
     </property>
+    <property name="sizeConstraint">
+     <enum>QLayout::SetDefaultConstraint</enum>
+    </property>
     <property name="leftMargin">
-     <number>2</number>
+     <number>0</number>
     </property>
     <property name="topMargin">
      <number>0</number>
@@ -630,10 +633,13 @@ QSizeGrip
           </font>
          </property>
          <property name="frameShape">
-          <enum>QFrame::StyledPanel</enum>
+          <enum>QFrame::NoFrame</enum>
          </property>
          <property name="frameShadow">
           <enum>QFrame::Raised</enum>
+         </property>
+         <property name="lineWidth">
+          <number>0</number>
          </property>
          <layout class="QHBoxLayout" name="horizontalLayout_5">
           <property name="spacing">
@@ -695,10 +701,13 @@ QSizeGrip
        <item>
         <widget class="QFrame" name="centralHeaderSection">
          <property name="frameShape">
-          <enum>QFrame::StyledPanel</enum>
+          <enum>QFrame::NoFrame</enum>
          </property>
          <property name="frameShadow">
-          <enum>QFrame::Raised</enum>
+          <enum>QFrame::Plain</enum>
+         </property>
+         <property name="lineWidth">
+          <number>0</number>
          </property>
          <layout class="QVBoxLayout" name="verticalLayout">
           <property name="spacing">
@@ -723,6 +732,9 @@ QSizeGrip
               <pointsize>11</pointsize>
              </font>
             </property>
+            <property name="frameShape">
+             <enum>QFrame::NoFrame</enum>
+            </property>
             <property name="text">
              <string>Data Cleaner Tool v0.1a</string>
             </property>
@@ -740,13 +752,25 @@ QSizeGrip
        <item alignment="Qt::AlignRight">
         <widget class="QFrame" name="systemBtns">
          <property name="frameShape">
-          <enum>QFrame::StyledPanel</enum>
+          <enum>QFrame::NoFrame</enum>
          </property>
          <property name="frameShadow">
           <enum>QFrame::Raised</enum>
          </property>
+         <property name="lineWidth">
+          <number>0</number>
+         </property>
          <layout class="QHBoxLayout" name="horizontalLayout_6">
+          <property name="spacing">
+           <number>4</number>
+          </property>
+          <property name="topMargin">
+           <number>6</number>
+          </property>
           <property name="rightMargin">
+           <number>5</number>
+          </property>
+          <property name="bottomMargin">
            <number>6</number>
           </property>
           <item>
@@ -762,8 +786,8 @@ QSizeGrip
             </property>
             <property name="iconSize">
              <size>
-              <width>16</width>
-              <height>16</height>
+              <width>15</width>
+              <height>15</height>
              </size>
             </property>
             <property name="checkable">
@@ -834,13 +858,26 @@ QSizeGrip
      </widget>
     </item>
     <item>
+     <widget class="Line" name="lineHeader">
+      <property name="frameShadow">
+       <enum>QFrame::Sunken</enum>
+      </property>
+      <property name="lineWidth">
+       <number>2</number>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item>
      <widget class="QWidget" name="centralContainer" native="true">
       <layout class="QHBoxLayout" name="horizontalLayout">
        <property name="spacing">
         <number>0</number>
        </property>
        <property name="leftMargin">
-        <number>0</number>
+        <number>2</number>
        </property>
        <property name="topMargin">
         <number>0</number>
@@ -902,7 +939,7 @@ QSizeGrip
                 </font>
                </property>
                <property name="frameShape">
-                <enum>QFrame::StyledPanel</enum>
+                <enum>QFrame::NoFrame</enum>
                </property>
                <property name="frameShadow">
                 <enum>QFrame::Raised</enum>
@@ -1038,7 +1075,7 @@ QSizeGrip
              <item alignment="Qt::AlignBottom">
               <widget class="QFrame" name="frame_6">
                <property name="frameShape">
-                <enum>QFrame::StyledPanel</enum>
+                <enum>QFrame::NoFrame</enum>
                </property>
                <property name="frameShadow">
                 <enum>QFrame::Raised</enum>
@@ -1161,30 +1198,27 @@ QSizeGrip
             </layout>
            </widget>
           </item>
-          <item>
-           <widget class="Line" name="lineLeftMenu">
-            <property name="styleSheet">
-             <string notr="true">color: rgb(48, 53, 61);</string>
-            </property>
-            <property name="frameShadow">
-             <enum>QFrame::Raised</enum>
-            </property>
-            <property name="lineWidth">
-             <number>2</number>
-            </property>
-            <property name="midLineWidth">
-             <number>0</number>
-            </property>
-            <property name="orientation">
-             <enum>Qt::Vertical</enum>
-            </property>
-           </widget>
-          </item>
          </layout>
         </widget>
        </item>
        <item>
+        <widget class="Line" name="lineVertical">
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+        </widget>
+       </item>
+       <item>
         <widget class="QWidget" name="mainBodyContainer" native="true">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="minimumSize">
           <size>
            <width>560</width>

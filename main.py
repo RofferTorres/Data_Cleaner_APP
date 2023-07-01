@@ -2,7 +2,7 @@
 import sys
 import os
 #import GUI file
-from Data_Cleaner_Tool.UI.data_tool import *
+from Data_Cleaner_Tool.UI.ui_data_tool import *
 
 #Classe principale
 class Data_Tool_Application(QMainWindow):
