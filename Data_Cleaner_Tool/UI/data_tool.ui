@@ -26,7 +26,16 @@
    <string>Data Cleaner Tool v0.1a</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">
+   <string notr="true">#dropBoxFrame{
+	border: 4px dashed #d0d1da;
+	border-radius: 28px;
+}
+
+#dropBoxFrame:hover{
+	border: 4px dashed #3573f0;
+	border-radius: 28px;
+}
+
 #MenuBtn{
 	border:none;
 	background-color:transparent;
