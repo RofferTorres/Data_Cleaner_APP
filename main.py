@@ -2,7 +2,7 @@
 import sys
 import os
 #import GUI file
-#from PySide6.QtGui import QDragEnterEvent, QDropEvent
+from PySide6.QtGui import QDragEnterEvent, QDropEvent
 from Data_Cleaner_Tool.UI.ui_data_tool import *
 
 #Classe principale
@@ -25,6 +25,8 @@ class Data_Tool_Application(QMainWindow):
         self.ui.dropBoxFrame.dragEnterEvent = lambda event: self.dragEnterEvent(event)
         self.ui.dropBoxFrame.dropEvent = lambda event: self.dropEvent(event)
 
+        # Frameless
+        self.setWindowFlags(Qt.FramelessWindowHint)
         # Mostra la finestra
         self.show()
 
@@ -62,4 +64,5 @@ class Data_Tool_Application(QMainWindow):
 if __name__ == '__main__':
     app = QApplication(sys.argv)
     window = Data_Tool_Application()
+
     sys.exit(app.exec())

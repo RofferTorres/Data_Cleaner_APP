@@ -1247,7 +1247,7 @@ QSizeGrip
              <enum>QFrame::Raised</enum>
             </property>
             <layout class="QVBoxLayout" name="verticalLayout_3">
-             <item alignment="Qt::AlignHCenter|Qt::AlignTop">
+             <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
               <widget class="QLabel" name="uploadIcon">
                <property name="minimumSize">
                 <size>

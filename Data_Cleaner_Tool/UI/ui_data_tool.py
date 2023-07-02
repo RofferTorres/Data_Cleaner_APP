@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'data_tooljLxljJ.ui'
+## Form generated from reading UI file 'data_toolltVWRJ.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.5.1
 ##
@@ -13,7 +13,7 @@ from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
     QSize, QTime, QUrl, Qt)
 from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QFont, QFontDatabase, QGradient, QIcon,
-    QImage, QKeySequence, QLinearGradient, QPainter, QDragEnterEvent, QDropEvent,
+    QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
 from PySide6.QtWidgets import (QApplication, QFrame, QHBoxLayout, QLabel,
     QLayout, QMainWindow, QPushButton, QSizePolicy,
@@ -880,7 +880,7 @@ class Ui_MainWindow(object):
         self.uploadIcon.setPixmap(QPixmap(u":/icons/icons/uploadDocument.png"))
         self.uploadIcon.setScaledContents(True)
 
-        self.verticalLayout_3.addWidget(self.uploadIcon, 0, Qt.AlignHCenter|Qt.AlignTop)
+        self.verticalLayout_3.addWidget(self.uploadIcon, 0, Qt.AlignHCenter|Qt.AlignVCenter)
 
         self.dragLabel = QLabel(self.dropBoxFrame)
         self.dragLabel.setObjectName(u"dragLabel")
