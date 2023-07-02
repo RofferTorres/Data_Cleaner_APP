@@ -580,7 +580,7 @@ QSizeGrip
   <property name="animated">
    <bool>false</bool>
   </property>
-  <widget class="QWidget" name="centralwidget">
+  <widget class="QWidget" name="mainWidget">
    <layout class="QVBoxLayout" name="verticalLayout_11">
     <property name="spacing">
      <number>2</number>
@@ -762,7 +762,7 @@ QSizeGrip
          </property>
          <layout class="QHBoxLayout" name="horizontalLayout_6">
           <property name="spacing">
-           <number>4</number>
+           <number>5</number>
           </property>
           <property name="topMargin">
            <number>6</number>
@@ -780,14 +780,12 @@ QSizeGrip
             </property>
             <property name="icon">
              <iconset resource="../../resource.qrc">
-              <normaloff>:/icons/icons/macos-close-30.png</normaloff>
-              <normalon>:/icons/icons/macos-close-30.png</normalon>
-              <activeon>:/icons/icons/hover-macos-close-30.png</activeon>:/icons/icons/macos-close-30.png</iconset>
+              <normaloff>:/icons/icons/closeIconMacOS.svg</normaloff>:/icons/icons/closeIconMacOS.svg</iconset>
             </property>
             <property name="iconSize">
              <size>
-              <width>15</width>
-              <height>15</height>
+              <width>14</width>
+              <height>14</height>
              </size>
             </property>
             <property name="checkable">
@@ -811,14 +809,12 @@ QSizeGrip
             </property>
             <property name="icon">
              <iconset resource="../../resource.qrc">
-              <normaloff>:/icons/icons/macos-minimize-30.png</normaloff>
-              <normalon>:/icons/icons/macos-minimize-30.png</normalon>
-              <activeon>:/icons/icons/hover-macos-minimize-30.png</activeon>:/icons/icons/macos-minimize-30.png</iconset>
+              <normaloff>:/icons/icons/minimizeIconMacOS.svg</normaloff>:/icons/icons/minimizeIconMacOS.svg</iconset>
             </property>
             <property name="iconSize">
              <size>
-              <width>16</width>
-              <height>16</height>
+              <width>14</width>
+              <height>14</height>
              </size>
             </property>
             <property name="checkable">
@@ -836,14 +832,12 @@ QSizeGrip
             </property>
             <property name="icon">
              <iconset resource="../../resource.qrc">
-              <normaloff>:/icons/icons/macos-full-screen-30.png</normaloff>
-              <normalon>:/icons/icons/macos-full-screen-30.png</normalon>
-              <activeon>:/icons/icons/hover-macos-full-screen-30.png</activeon>:/icons/icons/macos-full-screen-30.png</iconset>
+              <normaloff>:/icons/icons/fullscreenIconMacOS.svg</normaloff>:/icons/icons/fullscreenIconMacOS.svg</iconset>
             </property>
             <property name="iconSize">
              <size>
-              <width>16</width>
-              <height>16</height>
+              <width>14</width>
+              <height>14</height>
              </size>
             </property>
             <property name="checkable">

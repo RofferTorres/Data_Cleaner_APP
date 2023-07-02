@@ -1,11 +1,11 @@
 <RCC>
   <qresource prefix="icons">
-    <file>icons/hover-macos-close-30.png</file>
-    <file>icons/hover-macos-full-screen-30.png</file>
-    <file>icons/hover-macos-minimize-30.png</file>
-    <file>icons/macos-close-30.png</file>
-    <file>icons/macos-full-screen-30.png</file>
-    <file>icons/macos-minimize-30.png</file>
+    <file>icons/closeIconMacOS.svg</file>
+    <file>icons/hover-fullscreenIconMacOS.svg</file>
+    <file>icons/hover-minimizeIconMacOS.svg</file>
+    <file>icons/fullscreenIconMacOS.svg</file>
+    <file>icons/minimizeIconMacOS.svg</file>
+    <file>icons/hover-closeIconMacOS.svg</file>
     <file>icons/activity.svg</file>
     <file>icons/airplay.svg</file>
     <file>icons/alert-circle.svg</file>

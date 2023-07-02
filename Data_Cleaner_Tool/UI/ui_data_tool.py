@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'data_toolzHthLW.ui'
+## Form generated from reading UI file 'data_toolGPRPaM.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.5.1
 ##
@@ -591,14 +591,14 @@ class Ui_MainWindow(object):
 "\n"
 "")
         MainWindow.setAnimated(False)
-        self.centralwidget = QWidget(MainWindow)
-        self.centralwidget.setObjectName(u"centralwidget")
-        self.verticalLayout_11 = QVBoxLayout(self.centralwidget)
+        self.mainWidget = QWidget(MainWindow)
+        self.mainWidget.setObjectName(u"mainWidget")
+        self.verticalLayout_11 = QVBoxLayout(self.mainWidget)
         self.verticalLayout_11.setSpacing(2)
         self.verticalLayout_11.setObjectName(u"verticalLayout_11")
         self.verticalLayout_11.setSizeConstraint(QLayout.SetDefaultConstraint)
         self.verticalLayout_11.setContentsMargins(0, 0, 0, 0)
-        self.headerContainer = QWidget(self.centralwidget)
+        self.headerContainer = QWidget(self.mainWidget)
         self.headerContainer.setObjectName(u"headerContainer")
         self.headerContainer.setStyleSheet(u"background-color: rgb(48, 53, 61);")
         self.horizontalLayout_2 = QHBoxLayout(self.headerContainer)
@@ -670,17 +670,15 @@ class Ui_MainWindow(object):
         self.systemBtns.setFrameShadow(QFrame.Raised)
         self.systemBtns.setLineWidth(0)
         self.horizontalLayout_6 = QHBoxLayout(self.systemBtns)
-        self.horizontalLayout_6.setSpacing(4)
+        self.horizontalLayout_6.setSpacing(5)
         self.horizontalLayout_6.setObjectName(u"horizontalLayout_6")
         self.horizontalLayout_6.setContentsMargins(-1, 6, 5, 6)
         self.closeBtn = QPushButton(self.systemBtns)
         self.closeBtn.setObjectName(u"closeBtn")
         icon1 = QIcon()
-        icon1.addFile(u":/icons/icons/macos-close-30.png", QSize(), QIcon.Normal, QIcon.Off)
-        icon1.addFile(u":/icons/icons/macos-close-30.png", QSize(), QIcon.Normal, QIcon.On)
-        icon1.addFile(u":/icons/icons/hover-macos-close-30.png", QSize(), QIcon.Active, QIcon.On)
+        icon1.addFile(u":/icons/icons/closeIconMacOS.svg", QSize(), QIcon.Normal, QIcon.Off)
         self.closeBtn.setIcon(icon1)
-        self.closeBtn.setIconSize(QSize(15, 15))
+        self.closeBtn.setIconSize(QSize(14, 14))
         self.closeBtn.setCheckable(True)
         self.closeBtn.setChecked(False)
         self.closeBtn.setAutoRepeat(False)
@@ -691,11 +689,9 @@ class Ui_MainWindow(object):
         self.minimizeBtn = QPushButton(self.systemBtns)
         self.minimizeBtn.setObjectName(u"minimizeBtn")
         icon2 = QIcon()
-        icon2.addFile(u":/icons/icons/macos-minimize-30.png", QSize(), QIcon.Normal, QIcon.Off)
-        icon2.addFile(u":/icons/icons/macos-minimize-30.png", QSize(), QIcon.Normal, QIcon.On)
-        icon2.addFile(u":/icons/icons/hover-macos-minimize-30.png", QSize(), QIcon.Active, QIcon.On)
+        icon2.addFile(u":/icons/icons/minimizeIconMacOS.svg", QSize(), QIcon.Normal, QIcon.Off)
         self.minimizeBtn.setIcon(icon2)
-        self.minimizeBtn.setIconSize(QSize(16, 16))
+        self.minimizeBtn.setIconSize(QSize(14, 14))
         self.minimizeBtn.setCheckable(True)
         self.minimizeBtn.setAutoDefault(False)
 
@@ -704,11 +700,9 @@ class Ui_MainWindow(object):
         self.restoreBtn = QPushButton(self.systemBtns)
         self.restoreBtn.setObjectName(u"restoreBtn")
         icon3 = QIcon()
-        icon3.addFile(u":/icons/icons/macos-full-screen-30.png", QSize(), QIcon.Normal, QIcon.Off)
-        icon3.addFile(u":/icons/icons/macos-full-screen-30.png", QSize(), QIcon.Normal, QIcon.On)
-        icon3.addFile(u":/icons/icons/hover-macos-full-screen-30.png", QSize(), QIcon.Active, QIcon.On)
+        icon3.addFile(u":/icons/icons/fullscreenIconMacOS.svg", QSize(), QIcon.Normal, QIcon.Off)
         self.restoreBtn.setIcon(icon3)
-        self.restoreBtn.setIconSize(QSize(16, 16))
+        self.restoreBtn.setIconSize(QSize(14, 14))
         self.restoreBtn.setCheckable(True)
 
         self.horizontalLayout_6.addWidget(self.restoreBtn)
@@ -719,7 +713,7 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_11.addWidget(self.headerContainer)
 
-        self.lineHeader = QFrame(self.centralwidget)
+        self.lineHeader = QFrame(self.mainWidget)
         self.lineHeader.setObjectName(u"lineHeader")
         self.lineHeader.setFrameShadow(QFrame.Sunken)
         self.lineHeader.setLineWidth(2)
@@ -727,7 +721,7 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_11.addWidget(self.lineHeader)
 
-        self.centralContainer = QWidget(self.centralwidget)
+        self.centralContainer = QWidget(self.mainWidget)
         self.centralContainer.setObjectName(u"centralContainer")
         self.horizontalLayout = QHBoxLayout(self.centralContainer)
         self.horizontalLayout.setSpacing(0)
@@ -870,7 +864,7 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_11.addWidget(self.centralContainer)
 
-        self.lineFooter = QFrame(self.centralwidget)
+        self.lineFooter = QFrame(self.mainWidget)
         self.lineFooter.setObjectName(u"lineFooter")
         self.lineFooter.setAutoFillBackground(False)
         self.lineFooter.setStyleSheet(u"color: rgb(48, 53, 61);")
@@ -880,7 +874,7 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_11.addWidget(self.lineFooter)
 
-        self.footerContainer = QWidget(self.centralwidget)
+        self.footerContainer = QWidget(self.mainWidget)
         self.footerContainer.setObjectName(u"footerContainer")
         self.horizontalLayout_3 = QHBoxLayout(self.footerContainer)
         self.horizontalLayout_3.setSpacing(0)
@@ -909,7 +903,7 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_11.addWidget(self.footerContainer)
 
-        MainWindow.setCentralWidget(self.centralwidget)
+        MainWindow.setCentralWidget(self.mainWidget)
 
         self.retranslateUi(MainWindow)
 
