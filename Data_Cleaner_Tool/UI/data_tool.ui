@@ -658,7 +658,7 @@ QSizeGrip
            <number>0</number>
           </property>
           <item>
-           <widget class="QPushButton" name="MenuBtn_2">
+           <widget class="QPushButton" name="MenuBtn">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
               <horstretch>0</horstretch>
@@ -726,7 +726,7 @@ QSizeGrip
            <number>0</number>
           </property>
           <item>
-           <widget class="QLabel" name="windowsMainTitle_2">
+           <widget class="QLabel" name="windowsMainTitle">
             <property name="font">
              <font>
               <pointsize>11</pointsize>
@@ -775,6 +775,9 @@ QSizeGrip
           </property>
           <item>
            <widget class="QPushButton" name="closeBtn">
+            <property name="toolTip">
+             <string>Close</string>
+            </property>
             <property name="text">
              <string/>
             </property>
@@ -804,6 +807,9 @@ QSizeGrip
           </item>
           <item>
            <widget class="QPushButton" name="minimizeBtn">
+            <property name="toolTip">
+             <string>Minimize</string>
+            </property>
             <property name="text">
              <string/>
             </property>
@@ -827,6 +833,9 @@ QSizeGrip
           </item>
           <item>
            <widget class="QPushButton" name="restoreBtn">
+            <property name="toolTip">
+             <string>Resize</string>
+            </property>
             <property name="text">
              <string/>
             </property>
@@ -901,7 +910,7 @@ QSizeGrip
            <number>0</number>
           </property>
           <item>
-           <widget class="QWidget" name="leftMenuSubContainer_2" native="true">
+           <widget class="QWidget" name="leftMenuSubContainer" native="true">
             <layout class="QVBoxLayout" name="verticalLayout_7">
              <property name="spacing">
               <number>0</number>
@@ -955,7 +964,7 @@ QSizeGrip
                  <number>0</number>
                 </property>
                 <item>
-                 <widget class="QPushButton" name="homeBtn_2">
+                 <widget class="QPushButton" name="homeBtn">
                   <property name="minimumSize">
                    <size>
                     <width>0</width>
@@ -987,7 +996,7 @@ QSizeGrip
                  </widget>
                 </item>
                 <item>
-                 <widget class="QPushButton" name="settingBtn_2">
+                 <widget class="QPushButton" name="editBtn">
                   <property name="minimumSize">
                    <size>
                     <width>0</width>
@@ -1001,14 +1010,14 @@ QSizeGrip
                    </font>
                   </property>
                   <property name="toolTip">
-                   <string>Advance options</string>
+                   <string>Advanced options</string>
                   </property>
                   <property name="text">
                    <string/>
                   </property>
                   <property name="icon">
                    <iconset resource="../../resource.qrc">
-                    <normaloff>:/icons/icons/settings.svg</normaloff>:/icons/icons/settings.svg</iconset>
+                    <normaloff>:/icons/icons/edit.svg</normaloff>:/icons/icons/edit.svg</iconset>
                   </property>
                   <property name="iconSize">
                    <size>
@@ -1019,7 +1028,7 @@ QSizeGrip
                  </widget>
                 </item>
                 <item>
-                 <widget class="QPushButton" name="previewBtn_2">
+                 <widget class="QPushButton" name="previewBtn">
                   <property name="minimumSize">
                    <size>
                     <width>0</width>
@@ -1054,7 +1063,7 @@ QSizeGrip
               </widget>
              </item>
              <item>
-              <spacer name="verticalSpacer_2">
+              <spacer name="verticalSpacer">
                <property name="orientation">
                 <enum>Qt::Vertical</enum>
                </property>
@@ -1091,7 +1100,7 @@ QSizeGrip
                  <number>0</number>
                 </property>
                 <item>
-                 <widget class="QPushButton" name="themeBtn_2">
+                 <widget class="QPushButton" name="settingBtn">
                   <property name="minimumSize">
                    <size>
                     <width>0</width>
@@ -1112,7 +1121,7 @@ QSizeGrip
                   </property>
                   <property name="icon">
                    <iconset resource="../../resource.qrc">
-                    <normaloff>:/icons/icons/sun.svg</normaloff>:/icons/icons/sun.svg</iconset>
+                    <normaloff>:/icons/icons/settings.svg</normaloff>:/icons/icons/settings.svg</iconset>
                   </property>
                   <property name="iconSize">
                    <size>
@@ -1123,7 +1132,7 @@ QSizeGrip
                  </widget>
                 </item>
                 <item>
-                 <widget class="QPushButton" name="infoBtn_2">
+                 <widget class="QPushButton" name="infoBtn">
                   <property name="minimumSize">
                    <size>
                     <width>0</width>
@@ -1155,7 +1164,7 @@ QSizeGrip
                  </widget>
                 </item>
                 <item>
-                 <widget class="QPushButton" name="helpBtn_2">
+                 <widget class="QPushButton" name="helpBtn">
                   <property name="minimumSize">
                    <size>
                     <width>0</width>
@@ -1219,6 +1228,99 @@ QSizeGrip
            <height>0</height>
           </size>
          </property>
+         <layout class="QVBoxLayout" name="verticalLayout_2">
+          <item>
+           <widget class="QFrame" name="Dropboxframe">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>7</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_3">
+             <item alignment="Qt::AlignHCenter|Qt::AlignTop">
+              <widget class="QLabel" name="uploadIcon">
+               <property name="minimumSize">
+                <size>
+                 <width>88</width>
+                 <height>88</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>88</width>
+                 <height>88</height>
+                </size>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="textFormat">
+                <enum>Qt::AutoText</enum>
+               </property>
+               <property name="pixmap">
+                <pixmap resource="../../resource.qrc">:/icons/icons/uploadDocument.png</pixmap>
+               </property>
+               <property name="scaledContents">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+              <widget class="QLabel" name="dragLabel">
+               <property name="font">
+                <font>
+                 <family>Tahoma</family>
+                 <pointsize>24</pointsize>
+                 <italic>false</italic>
+                 <bold>true</bold>
+                 <underline>false</underline>
+                </font>
+               </property>
+               <property name="text">
+                <string>Trascina e rilascia un .CSV</string>
+               </property>
+              </widget>
+             </item>
+             <item alignment="Qt::AlignHCenter">
+              <widget class="QLabel" name="browseFileLabel">
+               <property name="font">
+                <font>
+                 <family>Tahoma</family>
+                 <pointsize>16</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>Sfoglia sul tuo dispositivo</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QFrame" name="basicSettingsFrame">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>3</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::NoFrame</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+           </widget>
+          </item>
+         </layout>
         </widget>
        </item>
       </layout>

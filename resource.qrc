@@ -1,5 +1,6 @@
 <RCC>
   <qresource prefix="icons">
+    <file>icons/uploadDocument.png</file>
     <file>icons/closeIconMacOS.svg</file>
     <file>icons/hover-fullscreenIconMacOS.svg</file>
     <file>icons/hover-minimizeIconMacOS.svg</file>

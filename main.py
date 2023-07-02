@@ -15,7 +15,7 @@ class Data_Tool_Application(QMainWindow):
         self.ui.closeBtn.clicked.connect(self.close)
         self.ui.minimizeBtn.clicked.connect(self.showMinimized)
         self.ui.restoreBtn.clicked.connect(self.toggleFullscreen)
-        #Eventi hover icone di sistema
+        #Eventi hover per cambiare icone di sistema
         self.ui.systemBtns.enterEvent = lambda event: self.hover_system_icons()
         self.ui.systemBtns.leaveEvent = lambda event: self.reset_system_icons()
 
@@ -28,12 +28,12 @@ class Data_Tool_Application(QMainWindow):
         else:
             self.showFullScreen()
     def hover_system_icons(self):
-        print('enter')
+        #print('enter')
         self.ui.closeBtn.setIcon(QIcon(u":/icons/icons/hover-closeIconMacOS.svg"))
         self.ui.minimizeBtn.setIcon(QIcon(u":/icons/icons/hover-minimizeIconMacOS.svg"))
         self.ui.restoreBtn.setIcon(QIcon(u":/icons/icons/hover-fullscreenIconMacOS.svg"))
     def reset_system_icons(self):
-        print('reset')
+        #print('reset')
         self.ui.closeBtn.setIcon(QIcon(u":/icons/icons/closeIconMacOS.svg"))
         self.ui.minimizeBtn.setIcon(QIcon(u":/icons/icons/minimizeIconMacOS.svg"))
         self.ui.restoreBtn.setIcon(QIcon(u":/icons/icons/fullscreenIconMacOS.svg"))
