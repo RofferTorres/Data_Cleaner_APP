@@ -27,8 +27,27 @@ class Data_Tool_Application(QMainWindow):
 
         # Frameless
         self.setWindowFlags(Qt.FramelessWindowHint)
+
+        #Val iniziale posizione cursore
+        oldPos = None
+
         # Mostra la finestra
         self.show()
+
+        #Fuzioni spostamento della finestra
+    def mousePressEvent(self, event):
+        if event.button() == Qt.MouseButton.LeftButton and self.ui.headerContainer.geometry().contains(event.position().toPoint()):
+            self.oldPos = event.globalPosition().toPoint()
+
+    def mouseMoveEvent(self, event):
+        if self.oldPos is not None:
+            delta = event.globalPosition().toPoint() - self.oldPos
+            self.move(self.pos() + delta)
+            self.oldPos = event.globalPosition().toPoint()
+
+    def mouseReleaseEvent(self, event):
+        self.oldPos = None
+
 
     #Funzioni tasti di sistema
     def toggleFullscreen(self):
