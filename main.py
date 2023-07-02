@@ -11,11 +11,14 @@ class Data_Tool_Application(QMainWindow):
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
 
-        #Eventi
+        #Eventi close/minimize/fullScreen
         self.ui.closeBtn.clicked.connect(self.close)
         self.ui.minimizeBtn.clicked.connect(self.showMinimized)
         self.ui.restoreBtn.clicked.connect(self.toggleFullscreen)
-        # TODO: rendere reponsive i tasti con qualche effetto o box-shadow
+        #Eventi hover icone di sistema
+        self.ui.systemBtns.enterEvent = lambda event: self.hover_system_icons()
+        self.ui.systemBtns.leaveEvent = lambda event: self.reset_system_icons()
+
         # Mostra la finestra
         self.show()
 
@@ -24,6 +27,16 @@ class Data_Tool_Application(QMainWindow):
             self.showNormal()  # Ripristina la finestra al suo stato precedente
         else:
             self.showFullScreen()
+    def hover_system_icons(self):
+        print('enter')
+        self.ui.closeBtn.setIcon(QIcon(u":/icons/icons/hover-closeIconMacOS.svg"))
+        self.ui.minimizeBtn.setIcon(QIcon(u":/icons/icons/hover-minimizeIconMacOS.svg"))
+        self.ui.restoreBtn.setIcon(QIcon(u":/icons/icons/hover-fullscreenIconMacOS.svg"))
+    def reset_system_icons(self):
+        print('reset')
+        self.ui.closeBtn.setIcon(QIcon(u":/icons/icons/closeIconMacOS.svg"))
+        self.ui.minimizeBtn.setIcon(QIcon(u":/icons/icons/minimizeIconMacOS.svg"))
+        self.ui.restoreBtn.setIcon(QIcon(u":/icons/icons/fullscreenIconMacOS.svg"))
 
 
 # Execute APP
@@ -31,4 +44,3 @@ if __name__ == '__main__':
     app = QApplication(sys.argv)
     window = Data_Tool_Application()
     sys.exit(app.exec())
-    print('commit tested')
