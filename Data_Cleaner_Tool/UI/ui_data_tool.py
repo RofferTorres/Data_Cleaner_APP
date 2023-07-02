@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'data_tooliyernl.ui'
+## Form generated from reading UI file 'data_tooljLxljJ.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.5.1
 ##
@@ -13,7 +13,7 @@ from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
     QSize, QTime, QUrl, Qt)
 from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QFont, QFontDatabase, QGradient, QIcon,
-    QImage, QKeySequence, QLinearGradient, QPainter,
+    QImage, QKeySequence, QLinearGradient, QPainter, QDragEnterEvent, QDropEvent,
     QPalette, QPixmap, QRadialGradient, QTransform)
 from PySide6.QtWidgets import (QApplication, QFrame, QHBoxLayout, QLabel,
     QLayout, QMainWindow, QPushButton, QSizePolicy,
@@ -860,18 +860,19 @@ class Ui_MainWindow(object):
         self.mainBodyContainer.setMinimumSize(QSize(560, 0))
         self.verticalLayout_2 = QVBoxLayout(self.mainBodyContainer)
         self.verticalLayout_2.setObjectName(u"verticalLayout_2")
-        self.Dropboxframe = QFrame(self.mainBodyContainer)
-        self.Dropboxframe.setObjectName(u"Dropboxframe")
+        self.dropBoxFrame = QFrame(self.mainBodyContainer)
+        self.dropBoxFrame.setObjectName(u"dropBoxFrame")
         sizePolicy3 = QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
         sizePolicy3.setHorizontalStretch(0)
         sizePolicy3.setVerticalStretch(7)
-        sizePolicy3.setHeightForWidth(self.Dropboxframe.sizePolicy().hasHeightForWidth())
-        self.Dropboxframe.setSizePolicy(sizePolicy3)
-        self.Dropboxframe.setFrameShape(QFrame.StyledPanel)
-        self.Dropboxframe.setFrameShadow(QFrame.Raised)
-        self.verticalLayout_3 = QVBoxLayout(self.Dropboxframe)
+        sizePolicy3.setHeightForWidth(self.dropBoxFrame.sizePolicy().hasHeightForWidth())
+        self.dropBoxFrame.setSizePolicy(sizePolicy3)
+        self.dropBoxFrame.setAcceptDrops(True)
+        self.dropBoxFrame.setFrameShape(QFrame.StyledPanel)
+        self.dropBoxFrame.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_3 = QVBoxLayout(self.dropBoxFrame)
         self.verticalLayout_3.setObjectName(u"verticalLayout_3")
-        self.uploadIcon = QLabel(self.Dropboxframe)
+        self.uploadIcon = QLabel(self.dropBoxFrame)
         self.uploadIcon.setObjectName(u"uploadIcon")
         self.uploadIcon.setMinimumSize(QSize(88, 88))
         self.uploadIcon.setMaximumSize(QSize(88, 88))
@@ -881,7 +882,7 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_3.addWidget(self.uploadIcon, 0, Qt.AlignHCenter|Qt.AlignTop)
 
-        self.dragLabel = QLabel(self.Dropboxframe)
+        self.dragLabel = QLabel(self.dropBoxFrame)
         self.dragLabel.setObjectName(u"dragLabel")
         font4 = QFont()
         font4.setFamilies([u"Tahoma"])
@@ -893,7 +894,7 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_3.addWidget(self.dragLabel, 0, Qt.AlignHCenter|Qt.AlignVCenter)
 
-        self.browseFileLabel = QLabel(self.Dropboxframe)
+        self.browseFileLabel = QLabel(self.dropBoxFrame)
         self.browseFileLabel.setObjectName(u"browseFileLabel")
         font5 = QFont()
         font5.setFamilies([u"Tahoma"])
@@ -903,7 +904,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_3.addWidget(self.browseFileLabel, 0, Qt.AlignHCenter)
 
 
-        self.verticalLayout_2.addWidget(self.Dropboxframe)
+        self.verticalLayout_2.addWidget(self.dropBoxFrame)
 
         self.basicSettingsFrame = QFrame(self.mainBodyContainer)
         self.basicSettingsFrame.setObjectName(u"basicSettingsFrame")
@@ -914,6 +915,13 @@ class Ui_MainWindow(object):
         self.basicSettingsFrame.setSizePolicy(sizePolicy4)
         self.basicSettingsFrame.setFrameShape(QFrame.NoFrame)
         self.basicSettingsFrame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_7 = QHBoxLayout(self.basicSettingsFrame)
+        self.horizontalLayout_7.setObjectName(u"horizontalLayout_7")
+        self.label = QLabel(self.basicSettingsFrame)
+        self.label.setObjectName(u"label")
+
+        self.horizontalLayout_7.addWidget(self.label)
+
 
         self.verticalLayout_2.addWidget(self.basicSettingsFrame)
 
@@ -1015,6 +1023,7 @@ class Ui_MainWindow(object):
         self.uploadIcon.setText("")
         self.dragLabel.setText(QCoreApplication.translate("MainWindow", u"Trascina e rilascia un .CSV", None))
         self.browseFileLabel.setText(QCoreApplication.translate("MainWindow", u"Sfoglia sul tuo dispositivo", None))
+        self.label.setText(QCoreApplication.translate("MainWindow", u"Basic settings section... #TODO", None))
         self.labelFooterLeft.setText(QCoreApplication.translate("MainWindow", u"Percorso Esempio: C:.....  >  output_file", None))
         self.labelFooterCenter.setText(QCoreApplication.translate("MainWindow", u"ENCODE: UTF-8", None))
         self.labelFooterRight.setText(QCoreApplication.translate("MainWindow", u"Status o notifiche ", None))

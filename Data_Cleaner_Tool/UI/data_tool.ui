@@ -1230,12 +1230,15 @@ QSizeGrip
          </property>
          <layout class="QVBoxLayout" name="verticalLayout_2">
           <item>
-           <widget class="QFrame" name="Dropboxframe">
+           <widget class="QFrame" name="dropBoxFrame">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
               <horstretch>0</horstretch>
               <verstretch>7</verstretch>
              </sizepolicy>
+            </property>
+            <property name="acceptDrops">
+             <bool>true</bool>
             </property>
             <property name="frameShape">
              <enum>QFrame::StyledPanel</enum>
@@ -1318,6 +1321,15 @@ QSizeGrip
             <property name="frameShadow">
              <enum>QFrame::Raised</enum>
             </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_7">
+             <item>
+              <widget class="QLabel" name="label">
+               <property name="text">
+                <string>Basic settings section... #TODO</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
            </widget>
           </item>
          </layout>

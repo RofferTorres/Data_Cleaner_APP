@@ -2,6 +2,7 @@
 import sys
 import os
 #import GUI file
+#from PySide6.QtGui import QDragEnterEvent, QDropEvent
 from Data_Cleaner_Tool.UI.ui_data_tool import *
 
 #Classe principale
@@ -15,13 +16,19 @@ class Data_Tool_Application(QMainWindow):
         self.ui.closeBtn.clicked.connect(self.close)
         self.ui.minimizeBtn.clicked.connect(self.showMinimized)
         self.ui.restoreBtn.clicked.connect(self.toggleFullscreen)
+
         #Eventi hover per cambiare icone di sistema
         self.ui.systemBtns.enterEvent = lambda event: self.hover_system_icons()
         self.ui.systemBtns.leaveEvent = lambda event: self.reset_system_icons()
 
+        #Evento drag&Drop
+        self.ui.dropBoxFrame.dragEnterEvent = lambda event: self.dragEnterEvent(event)
+        self.ui.dropBoxFrame.dropEvent = lambda event: self.dropEvent(event)
+
         # Mostra la finestra
         self.show()
 
+    #Funzioni tasti di sistema
     def toggleFullscreen(self):
         if self.isFullScreen():
             self.showNormal()  # Ripristina la finestra al suo stato precedente
@@ -38,6 +45,18 @@ class Data_Tool_Application(QMainWindow):
         self.ui.minimizeBtn.setIcon(QIcon(u":/icons/icons/minimizeIconMacOS.svg"))
         self.ui.restoreBtn.setIcon(QIcon(u":/icons/icons/fullscreenIconMacOS.svg"))
 
+    #Funzioni drag&drop
+    def dragEnterEvent(self, event: QDragEnterEvent):
+        print('drag event')
+        if event.mimeData().hasUrls():
+            event.acceptProposedAction()
+    def dropEvent(self, event: QDropEvent):
+        urls = event.mimeData().urls()
+        print(urls)
+        if urls:
+            file_path = urls[0].toLocalFile()
+            self.ui.dragLabel.setText(file_path)
+            self.ui.labelFooterLeft.setText(f'{file_path}  >  .../filename_out.csv')
 
 # Execute APP
 if __name__ == '__main__':
