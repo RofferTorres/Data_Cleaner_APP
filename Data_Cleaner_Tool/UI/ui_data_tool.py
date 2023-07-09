@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'data_toolqXnmOT.ui'
+## Form generated from reading UI file 'data_toolRfIDyl.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.5.1
 ##
@@ -31,13 +31,13 @@ class Ui_MainWindow(object):
         font.setPointSize(11)
         MainWindow.setFont(font)
         MainWindow.setStyleSheet(u"#dropBoxFrame{\n"
-"	border: 4px dashed #d0d1da;\n"
-"	border-radius: 28px;\n"
+"	border: 2px dashed #d0d1da;\n"
+"	border-radius: 8px;\n"
 "}\n"
 "\n"
 "#dropBoxFrame:hover{\n"
-"	border: 4px dashed #3573f0;\n"
-"	border-radius: 28px;\n"
+"	border: 2px dashed #3573f0;\n"
+"	border-radius: 8px;\n"
 "}\n"
 "\n"
 "#MenuBtn{\n"
@@ -86,9 +86,9 @@ class Ui_MainWindow(object):
 "\n"
 "\n"
 "QMenuBar::item:selected \n"
+"{\n"
 ""
-                        "{\n"
-"	background-color: #303030;\n"
+                        "	background-color: #303030;\n"
 "	color: #fff;\n"
 "\n"
 "}\n"
@@ -142,8 +142,8 @@ class Ui_MainWindow(object):
 "/*-----QToolBar-----*/\n"
 "QToolBar\n"
 "{\n"
-"	background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(83, 83, 83, 255),stop:0.293269 rgba(8"
-                        "1, 81, 81, 255),stop:0.634615 rgba(79, 79, 79, 255),stop:1 rgba(83, 83, 83, 255));\n"
+"	background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(83, 83, 83, 255),stop:0.293269 rgba(81, 81,"
+                        " 81, 255),stop:0.634615 rgba(79, 79, 79, 255),stop:1 rgba(83, 83, 83, 255));\n"
 "	border-top: none;\n"
 "	border-bottom: 1px solid #343434;\n"
 "	border-left: 1px solid #343434;\n"
@@ -195,8 +195,8 @@ class Ui_MainWindow(object):
 "\n"
 "QToolButton:pressed\n"
 "{\n"
-"	backgro"
-                        "und-color: #353534;\n"
+"	background-co"
+                        "lor: #353534;\n"
 "\n"
 "}\n"
 "\n"
@@ -244,9 +244,9 @@ class Ui_MainWindow(object):
 "\n"
 "QDockWidget::float-button\n"
 "{\n"
-"	max-width: 14p"
-                        "x;\n"
-"	max-height: 14px;\n"
+"	max-width: 14px;\n"
+""
+                        "	max-height: 14px;\n"
 "	margin-top:1px;\n"
 "\n"
 "}\n"
@@ -307,9 +307,9 @@ class Ui_MainWindow(object):
 "QSpinBox::up-button:hover, \n"
 "QDoubleSpinBox::up-button:hover\n"
 "{\n"
-"	background-color: #585"
-                        "858;\n"
-"\n"
+"	background-color: #585858;\n"
+""
+                        "\n"
 "}\n"
 "\n"
 "\n"
@@ -367,10 +367,10 @@ class Ui_MainWindow(object):
 "{\n"
 "    image: url(://arrow-down.png);\n"
 "    width: 7px;\n"
-"    height: 7px"
-                        ";\n"
+"    height: 7px;\n"
 "\n"
-"}\n"
+""
+                        "}\n"
 "\n"
 "\n"
 "/*-----QListView-----*/\n"
@@ -425,10 +425,10 @@ class Ui_MainWindow(object):
 "    color: rgb(0, 0, 0);\n"
 "\n"
 "}\n"
-""
-                        "\n"
 "\n"
-"QListView::item:selected:active \n"
+"\n"
+""
+                        "QListView::item:selected:active \n"
 "{\n"
 "    background-color: #b7b9be;\n"
 "    border: none;\n"
@@ -478,8 +478,8 @@ class Ui_MainWindow(object):
 "QScrollBar::sub-line:horizontal\n"
 "{\n"
 "    border: 1px solid #3d3d3d;\n"
-"   "
-                        " background-color: #3d3d3d;\n"
+"    backgroun"
+                        "d-color: #3d3d3d;\n"
 "    width: 17px;\n"
 "    subcontrol-position: left;\n"
 "    subcontrol-origin: margin;\n"
@@ -532,9 +532,9 @@ class Ui_MainWindow(object):
 "\n"
 "\n"
 "QScrollBar::add-line:vertical\n"
-""
-                        "{\n"
-"    border: 1px solid #3d3d3d;\n"
+"{\n"
+"  "
+                        "  border: 1px solid #3d3d3d;\n"
 "    background-color: #3d3d3d;\n"
 "    height: 15px;\n"
 "    subcontrol-position: bottom;\n"
@@ -582,8 +582,8 @@ class Ui_MainWindow(object):
 "/*-----QStatusBar-----*/\n"
 "QStatusBar \n"
 "{\n"
-"	background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(83, 83, 83, 255),stop:0.293269 rgba(81, 81, 81, 255),stop:0.634615 rgba(79,"
-                        " 79, 79, 255),stop:1 rgba(83, 83, 83, 255));\n"
+"	background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(83, 83, 83, 255),stop:0.293269 rgba(81, 81, 81, 255),stop:0.634615 rgba(79, 79, 79,"
+                        " 255),stop:1 rgba(83, 83, 83, 255));\n"
 "	color: #eee;\n"
 "	border: 1px solid #343434;\n"
 "\n"
@@ -679,7 +679,7 @@ class Ui_MainWindow(object):
         self.systemBtns.setFrameShadow(QFrame.Raised)
         self.systemBtns.setLineWidth(0)
         self.horizontalLayout_6 = QHBoxLayout(self.systemBtns)
-        self.horizontalLayout_6.setSpacing(5)
+        self.horizontalLayout_6.setSpacing(6)
         self.horizontalLayout_6.setObjectName(u"horizontalLayout_6")
         self.horizontalLayout_6.setContentsMargins(-1, 6, 5, 6)
         self.closeBtn = QPushButton(self.systemBtns)
@@ -868,7 +868,9 @@ class Ui_MainWindow(object):
         self.mainBodyContainer.setSizePolicy(sizePolicy2)
         self.mainBodyContainer.setMinimumSize(QSize(560, 0))
         self.verticalLayout_2 = QVBoxLayout(self.mainBodyContainer)
+        self.verticalLayout_2.setSpacing(6)
         self.verticalLayout_2.setObjectName(u"verticalLayout_2")
+        self.verticalLayout_2.setContentsMargins(45, 45, 45, 45)
         self.dropBoxFrame = QFrame(self.mainBodyContainer)
         self.dropBoxFrame.setObjectName(u"dropBoxFrame")
         sizePolicy3 = QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
@@ -880,7 +882,9 @@ class Ui_MainWindow(object):
         self.dropBoxFrame.setFrameShape(QFrame.StyledPanel)
         self.dropBoxFrame.setFrameShadow(QFrame.Raised)
         self.verticalLayout_3 = QVBoxLayout(self.dropBoxFrame)
+        self.verticalLayout_3.setSpacing(0)
         self.verticalLayout_3.setObjectName(u"verticalLayout_3")
+        self.verticalLayout_3.setContentsMargins(12, 45, -1, 45)
         self.uploadIcon = QLabel(self.dropBoxFrame)
         self.uploadIcon.setObjectName(u"uploadIcon")
         self.uploadIcon.setMinimumSize(QSize(88, 88))
@@ -895,7 +899,7 @@ class Ui_MainWindow(object):
         self.dragLabel.setObjectName(u"dragLabel")
         font4 = QFont()
         font4.setFamilies([u"Tahoma"])
-        font4.setPointSize(24)
+        font4.setPointSize(20)
         font4.setBold(True)
         font4.setItalic(False)
         font4.setUnderline(False)
@@ -908,9 +912,10 @@ class Ui_MainWindow(object):
         font5 = QFont()
         font5.setFamilies([u"Tahoma"])
         font5.setPointSize(16)
+        font5.setItalic(True)
         self.browseFileLabel.setFont(font5)
 
-        self.verticalLayout_3.addWidget(self.browseFileLabel, 0, Qt.AlignHCenter)
+        self.verticalLayout_3.addWidget(self.browseFileLabel, 0, Qt.AlignHCenter|Qt.AlignTop)
 
 
         self.verticalLayout_2.addWidget(self.dropBoxFrame)
@@ -925,6 +930,7 @@ class Ui_MainWindow(object):
         self.basicSettingsFrame.setFrameShape(QFrame.NoFrame)
         self.basicSettingsFrame.setFrameShadow(QFrame.Raised)
         self.horizontalLayout_7 = QHBoxLayout(self.basicSettingsFrame)
+        self.horizontalLayout_7.setSpacing(9)
         self.horizontalLayout_7.setObjectName(u"horizontalLayout_7")
         self.label = QLabel(self.basicSettingsFrame)
         self.label.setObjectName(u"label")
@@ -959,7 +965,7 @@ class Ui_MainWindow(object):
         self.labelFooterLeft = QLabel(self.footerContainer)
         self.labelFooterLeft.setObjectName(u"labelFooterLeft")
         font6 = QFont()
-        font6.setPointSize(9)
+        font6.setPointSize(10)
         self.labelFooterLeft.setFont(font6)
 
         self.horizontalLayout_3.addWidget(self.labelFooterLeft, 0, Qt.AlignLeft|Qt.AlignVCenter)
@@ -1033,7 +1039,7 @@ class Ui_MainWindow(object):
         self.dragLabel.setText(QCoreApplication.translate("MainWindow", u"Trascina e rilascia un .CSV", None))
         self.browseFileLabel.setText(QCoreApplication.translate("MainWindow", u"Sfoglia sul tuo dispositivo", None))
         self.label.setText(QCoreApplication.translate("MainWindow", u"Basic settings section... #TODO", None))
-        self.labelFooterLeft.setText(QCoreApplication.translate("MainWindow", u"Percorso Esempio: C:.....  >  output_file", None))
+        self.labelFooterLeft.setText(QCoreApplication.translate("MainWindow", u"Nessun file selezionato", None))
         self.labelFooterCenter.setText(QCoreApplication.translate("MainWindow", u"ENCODE: UTF-8", None))
         self.labelFooterRight.setText(QCoreApplication.translate("MainWindow", u"Status o notifiche ", None))
     # retranslateUi
