@@ -3,7 +3,8 @@ import sys
 import os
 from pathlib import PurePath
 #import GUI file
-from PySide6.QtGui import QDragEnterEvent, QDropEvent
+from PySide6.QtGui import (QDragEnterEvent, QDropEvent)
+from PySide6.QtCore import (QPropertyAnimation,QEasingCurve)
 from Data_Cleaner_Tool.UI.ui_data_tool import *
 
 #Classe principale
@@ -13,16 +14,19 @@ class Data_Tool_Application(QMainWindow):
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
 
-        #Eventi close/minimize/fullScreen
+        # Show/Hide Menu
+        self.ui.MenuBtn.clicked.connect(self.slideLeftMenuContainer)
+
+        # Eventi close/minimize/fullScreen
         self.ui.closeBtn.clicked.connect(self.close)
         self.ui.minimizeBtn.clicked.connect(self.showMinimized)
         self.ui.restoreBtn.clicked.connect(self.toggleFullscreen)
 
-        #Eventi hover per cambiare icone di sistema
+        # Eventi hover per cambiare icone di sistema
         self.ui.systemBtns.enterEvent = lambda event: self.hover_system_icons()
         self.ui.systemBtns.leaveEvent = lambda event: self.reset_system_icons()
 
-        #Evento drag&Drop
+        # Evento drag&Drop
         self.ui.dropBoxFrame.dragEnterEvent = lambda event: self.dragEnterEvent(event)
         self.ui.dropBoxFrame.dropEvent = lambda event: self.dropEvent(event)
 
@@ -31,6 +35,12 @@ class Data_Tool_Application(QMainWindow):
 
         #Val iniziale posizione cursore
         self.oldPos = None
+
+        #This gets the folder the Python file is in and creates the path for the stylesheet
+        stylesheet_path = os.path.join(os.path.dirname(__file__), 'Dark_Style.qss')
+
+        with open(stylesheet_path, 'r') as f:
+            self.setStyleSheet(f.read())
 
         # Mostra la finestra
         self.show()
@@ -105,12 +115,31 @@ class Data_Tool_Application(QMainWindow):
         self.ui.dragLabel.setText(f"{path}")
         self.ui.labelFooterLeft.setText(f'...{os.sep}{os.sep.join(path_parts[-1:])}  >  ...{os.sep}{PurePath(file_path).stem}_out.csv')
 
-    #Controllo formato files di input
+    # Controllo formato files di input
     def check_file_input(self,file_path):
         if file_path.endswith(('.txt','.csv','.tsv')):
             return True
         else:
             return False
+
+    # Show/hide menu laterale sinistro
+    def slideLeftMenuContainer(self):
+        width = self.ui.leftMenuSubContainer.width()
+
+        if self.ui.MenuBtn.isChecked():
+            newWidth = 28
+            self.ui.MenuBtn.setIcon(QIcon(u":/icons/icons/align-justify.svg"))
+        else:
+            newWidth = 155
+            self.ui.MenuBtn.setIcon(QIcon(u":/icons/icons/chevrons-left.svg"))
+        # Animazione
+        self.animation = QPropertyAnimation(self.ui.leftMenuContainer, b'maximumWidth')
+        self.animation.setDuration(750)
+        self.animation.setStartValue(width)
+        self.animation.setEndValue(newWidth)
+        self.animation.setEasingCurve(QEasingCurve.InOutQuart)
+        self.animation.start()
+
 
 # Execute APP
 if __name__ == '__main__':

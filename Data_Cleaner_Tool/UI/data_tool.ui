@@ -26,565 +26,7 @@
    <string>Data Cleaner Tool v0.1a</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">#dropBoxFrame{
-	border: 2px dashed #d0d1da;
-	border-radius: 8px;
-}
-
-#dropBoxFrame:hover{
-	border: 2px dashed #3573f0;
-	border-radius: 8px;
-}
-
-#MenuBtn{
-	border:none;
-	background-color:transparent;
-	background:none;
-	padding: 0;
-	margin: 0;
-	color:
-}
-
-/*-----QWidget-----*/
-QWidget
-{
-	background-color: #222429;
-	color: #eee;
-
-}
-
-
-/*-----QLabel-----*/
-QLabel
-{
-	background-color: transparent;
-	color: #eee;
-
-}
-
-
-/*-----QMenuBar-----*/
-QMenuBar 
-{
-	background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(83, 83, 83, 255),stop:0.293269 rgba(81, 81, 81, 255),stop:0.634615 rgba(79, 79, 79, 255),stop:1 rgba(83, 83, 83, 255));
-	border: 1px solid #343434;
-	color: #eee;
-	font-weight: bold;
-
-}
-
-
-QMenuBar::item 
-{
-	background-color: transparent;
-
-}
-
-
-QMenuBar::item:selected 
-{
-	background-color: #303030;
-	color: #fff;
-
-}
-
-
-QMenuBar::item:pressed 
-{
-	background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(89, 89, 89, 255),stop:1 rgba(66, 66, 66, 255));
-	border: 1px solid #000;
-	color: #fff;
-
-}
-
-
-/*-----QMenu-----*/
-QMenu
-{
-    background-color: #fff;
-    border: 1px solid #222;
-    padding: 4px;
-	color: #000;
-
-}
-
-
-QMenu::item
-{
-    background-color: transparent;
-    padding: 2px 20px 2px 20px;
-
-}
-
-
-QMenu::item:disabled
-{
-    color: #555;
-    background-color: transparent;
-    padding: 2px 20px 2px 20px;
-
-}
-
-
-QMenu::item:selected
-{
-    background-color: #91c9f7;
-    color: #000;
-
-}
-
-
-/*-----QToolBar-----*/
-QToolBar
-{
-	background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(83, 83, 83, 255),stop:0.293269 rgba(81, 81, 81, 255),stop:0.634615 rgba(79, 79, 79, 255),stop:1 rgba(83, 83, 83, 255));
-	border-top: none;
-	border-bottom: 1px solid #343434;
-	border-left: 1px solid #343434;
-	border-right: 1px solid #343434;
-
-}
-
-
-/*-----QPushButton-----*/
-QPushButton {
-	text-align: center;
-    border-radius: 6px;
-}
-
-QPushButton:hover
-{
-	background-color: #30353d;
-}
-
-QPushButton:pressed
-{
-	background-color: #3573f0;
-
-}
-
-QPushButton:checked
-{
-	background-color: #3573f0;
-}
-
-/*-----QToolButton-----*/
-QToolButton 
-{
-	background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(121, 121, 121, 255),stop:1 rgba(98, 98, 98, 255));
-	color: #eee;
-	border: 2px solid #30353d;
-	border-radius: 4px;
-	padding: 2px;
-	margin-left: 5px
-}
-
-
-QToolButton:hover
-{
-	background-color: #8b8b8b;
-	
-}
-
-
-QToolButton:pressed
-{
-	background-color: #353534;
-
-}
-
-
-QToolButton:checked
-{
-	background-color: #353534;
-	border: 1px solid gray;
-}
-
-
-/*-----QDockWidget-----*/
-QDockWidget
-{
-	color: #eee;
-	font-weight: bold;
-}
-
-
-QDockWidget &gt; QWidget
-{
-	background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(83, 83, 83, 255),stop:0.293269 rgba(81, 81, 81, 255),stop:0.634615 rgba(79, 79, 79, 255),stop:1 rgba(83, 83, 83, 255));
-	border: 1px solid #646564;
-	border-top: none;
-}
-
-
-QDockWidget::title 
-{
-	background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(77, 77, 77, 255),stop:0.451923 rgba(64, 64, 64, 255),stop:1 rgba(41, 41, 41, 255));
-	border: 1px solid #646564;
-	padding: 2px;
-
-}
-
-
-QDockWidget::close-button
-{
-	max-width: 14px;
-	max-height: 14px;
-	margin-top:1px;
-
-}
-
-
-QDockWidget::float-button
-{
-	max-width: 14px;
-	max-height: 14px;
-	margin-top:1px;
-
-}
-
-
-QDockWidget::close-button:hover
-{
-	border: none;
-	background-color: none;
-
-}
-
-
-QDockWidget::float-button:hover
-{
-	border: none;
-	background-color: none;
-
-}
-
-
-/*-----QLineEdit-----*/
-QLineEdit
-{
-	background-color: #363636;
-	color : #eee;
-	border: 1px solid #343434;
-	border-radius : 2px;
-	padding: 2px;
-
-}
-
-
-/*-----QSpinBox &amp; QDoubleSpinBox-----*/
-QSpinBox,
-QDoubleSpinBox 
-{
-    background-color: #363636;
-	color : #eee;
-	border: 1px solid #343434;
-	padding: 2px;
-    border-radius : 2px;
-
-}
-
-
-QSpinBox::up-button, 
-QDoubleSpinBox::up-button
-{
-	border-top-right-radius:2px;
-	background-color: #777777;
-    width: 16px; 
-    border-width: 1px;
-
-}
-
-
-QSpinBox::up-button:hover, 
-QDoubleSpinBox::up-button:hover
-{
-	background-color: #585858;
-
-}
-
-
-QSpinBox::up-button:pressed, 
-QDoubleSpinBox::up-button:pressed
-{
-	background-color: #252525;
-    width: 16px; 
-    border-width: 1px;
-
-}
-
-
-QSpinBox::up-arrow,
-QDoubleSpinBox::up-arrow
-{
-    image: url(://arrow-up.png);
-    width: 7px;
-    height: 7px;
-
-}
-
-
-QSpinBox::down-button, 
-QDoubleSpinBox::down-button
-{
-	border-bottom-right-radius:2px;
-	background-color: #777777;
-    width: 16px; 
-    border-width: 1px;
-
-}
-
-
-QSpinBox::down-button:hover, 
-QDoubleSpinBox::down-button:hover
-{
-	background-color: #585858;
-
-}
-
-
-QSpinBox::down-button:pressed, 
-QDoubleSpinBox::down-button:pressed
-{
-	background-color: #252525;
-    width: 16px; 
-    border-width: 1px;
-
-}
-
-
-QSpinBox::down-arrow,
-QDoubleSpinBox::down-arrow
-{
-    image: url(://arrow-down.png);
-    width: 7px;
-    height: 7px;
-
-}
-
-
-/*-----QListView-----*/
-QListView 
-{
-	background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(83, 83, 83, 255),stop:0.293269 rgba(81, 81, 81, 255),stop:0.634615 rgba(79, 79, 79, 255),stop:1 rgba(83, 83, 83, 255));
-    border : none;
-    color: white;
-    show-decoration-selected: 1; 
-    outline: 0;
-	border: 1px solid gray;
-
-}
-
-
-QListView::disabled 
-{
-	background-color: #656565;
-	color: #1b1b1b;
-    border: 1px solid #656565;
-
-}
-
-
-QListView::item 
-{
-    padding: 1px;
-
-}
-
-
-QListView::item:alternate 
-{
-    background-color: #4a4b4d;
-
-}
-
-
-QListView::item:selected 
-{
-    border: 1px solid #6a6ea9;
-    border: none;
-    color: rgb(0, 0, 0);
-
-}
-
-
-QListView::item:selected:!active 
-{
-    background-color: #b7b9be;
-    border: none;
-    color: rgb(0, 0, 0);
-
-}
-
-
-QListView::item:selected:active 
-{
-    background-color: #b7b9be;
-    border: none;
-    color: rgb(0, 0, 0);
-
-}
-
-
-QListView::item:hover {
-    background-color: #262626;
-    border: none;
-    color: white;
-
-}
-
-
-/*-----QScrollBar-----*/
-QScrollBar:horizontal
-{
-    border: 1px solid #222222;
-    background-color: #3d3d3d;
-    height: 15px;
-    margin: -2px 16px 0 16px;
-
-}
-
-
-QScrollBar::handle:horizontal
-{
-    background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(150, 150, 150, 255),stop:1 rgba(107, 107, 107, 255));
-	border-radius: 6px;
-    min-height: 20px;
-
-}
-
-
-QScrollBar::add-line:horizontal
-{
-    background-color: #3d3d3d;
-    width: 17px;
-    subcontrol-position: right;
-    subcontrol-origin: margin;
-
-}
-
-
-QScrollBar::sub-line:horizontal
-{
-    border: 1px solid #3d3d3d;
-    background-color: #3d3d3d;
-    width: 17px;
-    subcontrol-position: left;
-    subcontrol-origin: margin;
-
-}
-
-
-QScrollBar::right-arrow:horizontal
-{
-    image: url(://arrow-right.png);
-    width: 6px;
-    height: 6px;
-
-}
-
-
-QScrollBar::left-arrow:horizontal
-{
-    image: url(://arrow-left.png);
-    width: 6px;
-    height: 6px;
-
-}
-
-
-QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal
-{
-    background: none;
-
-}
-
-
-QScrollBar:vertical
-{
-    background-color: #3d3d3d;
-    width: 15px;
-    margin: 16px 0px 16px -2px;
-    border: 1px solid #222222;
-
-}
-
-
-QScrollBar::handle:vertical
-{
-    background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(150, 150, 150, 255),stop:1 rgba(107, 107, 107, 255));
-	border-radius: 6px;
-    min-height: 20px;
-
-}
-
-
-QScrollBar::add-line:vertical
-{
-    border: 1px solid #3d3d3d;
-    background-color: #3d3d3d;
-    height: 15px;
-    subcontrol-position: bottom;
-    subcontrol-origin: margin;
-
-}
-
-
-QScrollBar::sub-line:vertical
-{
-    border: 1px solid #3d3d3d;
-    background-color: #3d3d3d;
-    height: 15px;
-    subcontrol-position: top;
-    subcontrol-origin: margin;
-
-}
-
-
-QScrollBar::up-arrow:vertical
-{
-    image: url(://arrow-up.png);
-    width: 6px;
-    height: 6px;
-
-}
-
-
-QScrollBar::down-arrow:vertical
-{
-    image: url(://arrow-down.png);
-    width: 6px;
-    height: 6px;
-
-}
-
-
-QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical
-{
-    background: none;
-
-}
-
-
-/*-----QStatusBar-----*/
-QStatusBar 
-{
-	background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(83, 83, 83, 255),stop:0.293269 rgba(81, 81, 81, 255),stop:0.634615 rgba(79, 79, 79, 255),stop:1 rgba(83, 83, 83, 255));
-	color: #eee;
-	border: 1px solid #343434;
-
-}
-
-
-/*-----QSizeGrip-----*/
-QSizeGrip 
-{
-	background-color: image(&quot;./ressources/sizegrip.png&quot;); /*To replace*/
-	border: none;
-
-}
-
-</string>
+   <string notr="true"/>
   </property>
   <property name="animated">
    <bool>false</bool>
@@ -612,7 +54,7 @@ QSizeGrip
     <item>
      <widget class="QWidget" name="headerContainer" native="true">
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(48, 53, 61);</string>
+       <string notr="true">background-color: qlineargradient(spread:reflect, x1:0, y1:0, x2:1, y2:0.00568182, stop:0 rgba(54, 61, 70, 255), stop:0.502463 rgba(43, 46, 54, 255), stop:1 rgba(54, 61, 70, 255));</string>
       </property>
       <layout class="QHBoxLayout" name="horizontalLayout_2">
        <property name="spacing">
@@ -641,6 +83,9 @@ QSizeGrip
            <pointsize>12</pointsize>
           </font>
          </property>
+         <property name="styleSheet">
+          <string notr="true">background-color:transparent;</string>
+         </property>
          <property name="frameShape">
           <enum>QFrame::NoFrame</enum>
          </property>
@@ -655,7 +100,7 @@ QSizeGrip
            <number>0</number>
           </property>
           <property name="leftMargin">
-           <number>0</number>
+           <number>2</number>
           </property>
           <property name="topMargin">
            <number>0</number>
@@ -666,7 +111,7 @@ QSizeGrip
           <property name="bottomMargin">
            <number>0</number>
           </property>
-          <item>
+          <item alignment="Qt::AlignHCenter">
            <widget class="QPushButton" name="MenuBtn">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
@@ -702,6 +147,12 @@ QSizeGrip
               <height>32</height>
              </size>
             </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+            <property name="checked">
+             <bool>true</bool>
+            </property>
            </widget>
           </item>
          </layout>
@@ -709,6 +160,9 @@ QSizeGrip
        </item>
        <item>
         <widget class="QFrame" name="centralHeaderSection">
+         <property name="styleSheet">
+          <string notr="true">background-color:transparent;</string>
+         </property>
          <property name="frameShape">
           <enum>QFrame::NoFrame</enum>
          </property>
@@ -739,6 +193,7 @@ QSizeGrip
             <property name="font">
              <font>
               <pointsize>11</pointsize>
+              <bold>true</bold>
              </font>
             </property>
             <property name="frameShape">
@@ -760,6 +215,9 @@ QSizeGrip
        </item>
        <item alignment="Qt::AlignRight">
         <widget class="QFrame" name="systemBtns">
+         <property name="styleSheet">
+          <string notr="true">background-color:transparent;</string>
+         </property>
          <property name="frameShape">
           <enum>QFrame::NoFrame</enum>
          </property>
@@ -889,7 +347,7 @@ QSizeGrip
         <number>0</number>
        </property>
        <property name="leftMargin">
-        <number>2</number>
+        <number>0</number>
        </property>
        <property name="topMargin">
         <number>0</number>
@@ -902,12 +360,24 @@ QSizeGrip
        </property>
        <item alignment="Qt::AlignLeft">
         <widget class="QWidget" name="leftMenuContainer" native="true">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>28</width>
+           <height>16777215</height>
+          </size>
+         </property>
          <layout class="QHBoxLayout" name="horizontalLayout_4">
           <property name="spacing">
            <number>0</number>
           </property>
           <property name="leftMargin">
-           <number>1</number>
+           <number>0</number>
           </property>
           <property name="topMargin">
            <number>0</number>
@@ -920,6 +390,18 @@ QSizeGrip
           </property>
           <item>
            <widget class="QWidget" name="leftMenuSubContainer" native="true">
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>Calibri</family>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
             <layout class="QVBoxLayout" name="verticalLayout_7">
              <property name="spacing">
               <number>0</number>
@@ -931,7 +413,7 @@ QSizeGrip
               <number>0</number>
              </property>
              <property name="rightMargin">
-              <number>2</number>
+              <number>0</number>
              </property>
              <property name="bottomMargin">
               <number>0</number>
@@ -947,7 +429,7 @@ QSizeGrip
                <property name="font">
                 <font>
                  <family>Segoe UI</family>
-                 <pointsize>11</pointsize>
+                 <pointsize>12</pointsize>
                 </font>
                </property>
                <property name="frameShape">
@@ -974,23 +456,41 @@ QSizeGrip
                 </property>
                 <item>
                  <widget class="QPushButton" name="homeBtn">
+                  <property name="enabled">
+                   <bool>true</bool>
+                  </property>
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
                   <property name="minimumSize">
                    <size>
-                    <width>0</width>
+                    <width>160</width>
                     <height>28</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>16777215</width>
+                    <height>16777215</height>
                    </size>
                   </property>
                   <property name="font">
                    <font>
                     <family>Segoe UI</family>
-                    <pointsize>11</pointsize>
+                    <pointsize>13</pointsize>
                    </font>
                   </property>
                   <property name="toolTip">
-                   <string>Home</string>
+                   <string>Pagina principale</string>
+                  </property>
+                  <property name="autoFillBackground">
+                   <bool>false</bool>
                   </property>
                   <property name="text">
-                   <string/>
+                   <string>Home</string>
                   </property>
                   <property name="icon">
                    <iconset resource="../../resource.qrc">
@@ -1002,27 +502,45 @@ QSizeGrip
                     <height>24</height>
                    </size>
                   </property>
+                  <property name="checkable">
+                   <bool>false</bool>
+                  </property>
+                  <property name="autoDefault">
+                   <bool>false</bool>
+                  </property>
                  </widget>
                 </item>
                 <item>
                  <widget class="QPushButton" name="editBtn">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
                   <property name="minimumSize">
                    <size>
-                    <width>0</width>
+                    <width>160</width>
                     <height>28</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>16777215</width>
+                    <height>16777215</height>
                    </size>
                   </property>
                   <property name="font">
                    <font>
                     <family>Segoe UI</family>
-                    <pointsize>11</pointsize>
+                    <pointsize>13</pointsize>
                    </font>
                   </property>
                   <property name="toolTip">
                    <string>Advanced options</string>
                   </property>
                   <property name="text">
-                   <string/>
+                   <string>Opzioni avanzate</string>
                   </property>
                   <property name="icon">
                    <iconset resource="../../resource.qrc">
@@ -1038,23 +556,35 @@ QSizeGrip
                 </item>
                 <item>
                  <widget class="QPushButton" name="previewBtn">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
                   <property name="minimumSize">
                    <size>
-                    <width>0</width>
+                    <width>160</width>
                     <height>28</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>16777215</width>
+                    <height>16777215</height>
                    </size>
                   </property>
                   <property name="font">
                    <font>
                     <family>Segoe UI</family>
-                    <pointsize>11</pointsize>
+                    <pointsize>13</pointsize>
                    </font>
                   </property>
                   <property name="toolTip">
                    <string>Preview</string>
                   </property>
                   <property name="text">
-                   <string/>
+                   <string>Tabella</string>
                   </property>
                   <property name="icon">
                    <iconset resource="../../resource.qrc">
@@ -1078,13 +608,13 @@ QSizeGrip
                </property>
                <property name="sizeHint" stdset="0">
                 <size>
-                 <width>20</width>
+                 <width>28</width>
                  <height>40</height>
                 </size>
                </property>
               </spacer>
              </item>
-             <item alignment="Qt::AlignBottom">
+             <item>
               <widget class="QFrame" name="frame_6">
                <property name="frameShape">
                 <enum>QFrame::NoFrame</enum>
@@ -1110,23 +640,35 @@ QSizeGrip
                 </property>
                 <item>
                  <widget class="QPushButton" name="settingBtn">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
                   <property name="minimumSize">
                    <size>
-                    <width>0</width>
+                    <width>160</width>
                     <height>28</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>16777215</width>
+                    <height>16777215</height>
                    </size>
                   </property>
                   <property name="font">
                    <font>
                     <family>Segoe UI</family>
-                    <pointsize>11</pointsize>
+                    <pointsize>13</pointsize>
                    </font>
                   </property>
                   <property name="toolTip">
                    <string>Change theme</string>
                   </property>
                   <property name="text">
-                   <string/>
+                   <string>Impostazioni</string>
                   </property>
                   <property name="icon">
                    <iconset resource="../../resource.qrc">
@@ -1142,23 +684,35 @@ QSizeGrip
                 </item>
                 <item>
                  <widget class="QPushButton" name="infoBtn">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
                   <property name="minimumSize">
                    <size>
-                    <width>0</width>
+                    <width>160</width>
                     <height>28</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>16777215</width>
+                    <height>16777215</height>
                    </size>
                   </property>
                   <property name="font">
                    <font>
                     <family>Segoe UI</family>
-                    <pointsize>11</pointsize>
+                    <pointsize>13</pointsize>
                    </font>
                   </property>
                   <property name="toolTip">
                    <string>More information</string>
                   </property>
                   <property name="text">
-                   <string/>
+                   <string>Info</string>
                   </property>
                   <property name="icon">
                    <iconset resource="../../resource.qrc">
@@ -1174,23 +728,35 @@ QSizeGrip
                 </item>
                 <item>
                  <widget class="QPushButton" name="helpBtn">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
                   <property name="minimumSize">
                    <size>
-                    <width>0</width>
+                    <width>160</width>
                     <height>28</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>16777215</width>
+                    <height>16777215</height>
                    </size>
                   </property>
                   <property name="font">
                    <font>
                     <family>Segoe UI</family>
-                    <pointsize>11</pointsize>
+                    <pointsize>13</pointsize>
                    </font>
                   </property>
                   <property name="toolTip">
                    <string>Help</string>
                   </property>
                   <property name="text">
-                   <string/>
+                   <string>Aiuto</string>
                   </property>
                   <property name="icon">
                    <iconset resource="../../resource.qrc">
@@ -1239,7 +805,7 @@ QSizeGrip
          </property>
          <layout class="QVBoxLayout" name="verticalLayout_2">
           <property name="spacing">
-           <number>6</number>
+           <number>45</number>
           </property>
           <property name="leftMargin">
            <number>45</number>
@@ -1251,7 +817,7 @@ QSizeGrip
            <number>45</number>
           </property>
           <property name="bottomMargin">
-           <number>45</number>
+           <number>12</number>
           </property>
           <item>
            <widget class="QFrame" name="dropBoxFrame">
@@ -1283,7 +849,20 @@ QSizeGrip
              <property name="bottomMargin">
               <number>45</number>
              </property>
-             <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+             <item>
+              <spacer name="verticalSpacer_3">
+               <property name="orientation">
+                <enum>Qt::Vertical</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>20</width>
+                 <height>40</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item alignment="Qt::AlignHCenter|Qt::AlignBottom">
               <widget class="QLabel" name="uploadIcon">
                <property name="minimumSize">
                 <size>
@@ -1341,6 +920,19 @@ QSizeGrip
                </property>
               </widget>
              </item>
+             <item>
+              <spacer name="verticalSpacer_2">
+               <property name="orientation">
+                <enum>Qt::Vertical</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>20</width>
+                 <height>40</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
             </layout>
            </widget>
           </item>
@@ -1352,21 +944,305 @@ QSizeGrip
               <verstretch>3</verstretch>
              </sizepolicy>
             </property>
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
             <property name="frameShape">
              <enum>QFrame::NoFrame</enum>
             </property>
             <property name="frameShadow">
              <enum>QFrame::Raised</enum>
             </property>
-            <layout class="QHBoxLayout" name="horizontalLayout_7">
-             <property name="spacing">
-              <number>9</number>
+            <layout class="QGridLayout" name="gridLayout">
+             <property name="leftMargin">
+              <number>0</number>
              </property>
-             <item>
-              <widget class="QLabel" name="label">
-               <property name="text">
-                <string>Basic settings section... #TODO</string>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <property name="horizontalSpacing">
+              <number>60</number>
+             </property>
+             <property name="verticalSpacing">
+              <number>10</number>
+             </property>
+             <item row="1" column="0" rowspan="2">
+              <widget class="QGroupBox" name="groupBox_2">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                 <horstretch>4</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
                </property>
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <family>Calibri</family>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
+               <property name="title">
+                <string>CSV file</string>
+               </property>
+               <layout class="QVBoxLayout" name="verticalLayout_5">
+                <property name="spacing">
+                 <number>10</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>12</number>
+                </property>
+                <item>
+                 <widget class="QLabel" name="label_2">
+                  <property name="font">
+                   <font>
+                    <family>Calibri</family>
+                    <pointsize>13</pointsize>
+                    <bold>true</bold>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>Delimitatore:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QRadioButton" name="radioButton">
+                  <property name="font">
+                   <font>
+                    <family>Calibri</family>
+                    <pointsize>13</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>comma</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QRadioButton" name="radioButton_2">
+                  <property name="font">
+                   <font>
+                    <family>Calibri</family>
+                    <pointsize>13</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>semicolon</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QRadioButton" name="radioButton_3">
+                  <property name="font">
+                   <font>
+                    <family>Calibri</family>
+                    <pointsize>13</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>pipeline</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QRadioButton" name="radioButton_4">
+                  <property name="font">
+                   <font>
+                    <family>Calibri</family>
+                    <pointsize>13</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>tab</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item row="1" column="1">
+              <widget class="QGroupBox" name="groupBox_3">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                 <horstretch>5</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="font">
+                <font>
+                 <family>Calibri</family>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
+               <property name="title">
+                <string>General</string>
+               </property>
+               <property name="flat">
+                <bool>false</bool>
+               </property>
+               <property name="checkable">
+                <bool>false</bool>
+               </property>
+               <layout class="QGridLayout" name="gridLayout_2">
+                <property name="spacing">
+                 <number>10</number>
+                </property>
+                <item row="2" column="0" alignment="Qt::AlignLeft">
+                 <widget class="QLabel" name="label">
+                  <property name="font">
+                   <font>
+                    <family>Calibri</family>
+                    <pointsize>13</pointsize>
+                    <bold>true</bold>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>Output filename:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="1">
+                 <widget class="QLineEdit" name="lineEdit">
+                  <property name="maximumSize">
+                   <size>
+                    <width>300</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <family>Calibri</family>
+                    <pointsize>12</pointsize>
+                    <italic>true</italic>
+                   </font>
+                  </property>
+                  <property name="inputMask">
+                   <string>file_out.csv</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="5" column="0">
+                 <widget class="QCheckBox" name="checkBox">
+                  <property name="font">
+                   <font>
+                    <family>Calibri</family>
+                    <pointsize>13</pointsize>
+                    <bold>true</bold>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>Skip righe vuote</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="5" column="1" alignment="Qt::AlignRight">
+                 <widget class="QCheckBox" name="checkBox_2">
+                  <property name="font">
+                   <font>
+                    <family>Calibri</family>
+                    <pointsize>13</pointsize>
+                    <bold>true</bold>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>Trim tutte le colonne</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item row="0" column="0">
+              <widget class="QPushButton" name="pushButton">
+               <property name="font">
+                <font>
+                 <family>Calibri</family>
+                 <pointsize>13</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>Opzioni base</string>
+               </property>
+               <property name="icon">
+                <iconset resource="../../resource.qrc">
+                 <normaloff>:/icons/icons/plus.svg</normaloff>
+                 <activeon>:/icons/icons/minus-circle.svg</activeon>:/icons/icons/plus.svg</iconset>
+               </property>
+               <property name="checkable">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="1">
+              <widget class="QGroupBox" name="groupBox">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                 <horstretch>5</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="font">
+                <font>
+                 <family>Calibri</family>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
+               <property name="title">
+                <string>Excel file</string>
+               </property>
+               <property name="checkable">
+                <bool>false</bool>
+               </property>
+               <layout class="QHBoxLayout" name="horizontalLayout_7">
+                <property name="spacing">
+                 <number>25</number>
+                </property>
+                <item>
+                 <widget class="QLabel" name="label_4">
+                  <property name="font">
+                   <font>
+                    <family>Calibri</family>
+                    <pointsize>13</pointsize>
+                    <bold>true</bold>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>SheetName:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="lineEdit_2">
+                  <property name="maximumSize">
+                   <size>
+                    <width>16777215</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <family>Calibri</family>
+                    <pointsize>12</pointsize>
+                    <italic>true</italic>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>Sheet1</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
               </widget>
              </item>
             </layout>
@@ -1413,6 +1289,7 @@ QSizeGrip
         <widget class="QLabel" name="labelFooterLeft">
          <property name="font">
           <font>
+           <family>Calibri</family>
            <pointsize>10</pointsize>
           </font>
          </property>
@@ -1425,11 +1302,12 @@ QSizeGrip
         <widget class="QLabel" name="labelFooterCenter">
          <property name="font">
           <font>
+           <family>Calibri</family>
            <pointsize>10</pointsize>
           </font>
          </property>
          <property name="text">
-          <string>ENCODE: UTF-8</string>
+          <string>ENCODE: Default (UTF-8)</string>
          </property>
         </widget>
        </item>
@@ -1437,6 +1315,7 @@ QSizeGrip
         <widget class="QLabel" name="labelFooterRight">
          <property name="font">
           <font>
+           <family>Calibri</family>
            <pointsize>10</pointsize>
           </font>
          </property>
