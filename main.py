@@ -5,6 +5,7 @@ from pathlib import PurePath
 #import GUI file
 from PySide6.QtGui import (QDragEnterEvent, QDropEvent)
 from PySide6.QtCore import (QPropertyAnimation,QEasingCurve)
+from PySide6.QtWidgets import (QGraphicsDropShadowEffect)
 from Data_Cleaner_Tool.UI.ui_data_tool import *
 
 #Classe principale
@@ -42,7 +43,6 @@ class Data_Tool_Application(QMainWindow):
         with open(stylesheet_path, 'r') as f:
             self.setStyleSheet(f.read())
 
-        # Mostra la finestra
         self.show()
 
     #Fuzioni spostamento della finestra

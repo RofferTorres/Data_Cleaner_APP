@@ -805,7 +805,7 @@
          </property>
          <layout class="QVBoxLayout" name="verticalLayout_2">
           <property name="spacing">
-           <number>45</number>
+           <number>12</number>
           </property>
           <property name="leftMargin">
            <number>45</number>
@@ -824,7 +824,7 @@
             <property name="sizePolicy">
              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
               <horstretch>0</horstretch>
-              <verstretch>7</verstretch>
+              <verstretch>12</verstretch>
              </sizepolicy>
             </property>
             <property name="acceptDrops">
@@ -844,10 +844,10 @@
               <number>12</number>
              </property>
              <property name="topMargin">
-              <number>45</number>
+              <number>35</number>
              </property>
              <property name="bottomMargin">
-              <number>45</number>
+              <number>35</number>
              </property>
              <item>
               <spacer name="verticalSpacer_3">
@@ -941,7 +941,7 @@
             <property name="sizePolicy">
              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
               <horstretch>0</horstretch>
-              <verstretch>3</verstretch>
+              <verstretch>2</verstretch>
              </sizepolicy>
             </property>
             <property name="styleSheet">
@@ -973,10 +973,10 @@
               <number>10</number>
              </property>
              <item row="1" column="0" rowspan="2">
-              <widget class="QGroupBox" name="groupBox_2">
+              <widget class="QGroupBox" name="csvBasicGroup">
                <property name="sizePolicy">
                 <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                 <horstretch>4</horstretch>
+                 <horstretch>5</horstretch>
                  <verstretch>0</verstretch>
                 </sizepolicy>
                </property>
@@ -1003,7 +1003,7 @@
                  <number>12</number>
                 </property>
                 <item>
-                 <widget class="QLabel" name="label_2">
+                 <widget class="QLabel" name="delimiterLabel">
                   <property name="font">
                    <font>
                     <family>Calibri</family>
@@ -1017,25 +1017,43 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QRadioButton" name="radioButton">
+                 <widget class="QRadioButton" name="commaRadioBtn">
                   <property name="font">
                    <font>
                     <family>Calibri</family>
                     <pointsize>13</pointsize>
                    </font>
+                  </property>
+                  <property name="focusPolicy">
+                   <enum>Qt::ClickFocus</enum>
+                  </property>
+                  <property name="autoFillBackground">
+                   <bool>false</bool>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: rgba(255, 255, 255, 0);</string>
                   </property>
                   <property name="text">
                    <string>comma</string>
                   </property>
+                  <property name="checked">
+                   <bool>true</bool>
+                  </property>
                  </widget>
                 </item>
                 <item>
-                 <widget class="QRadioButton" name="radioButton_2">
+                 <widget class="QRadioButton" name="semiclonRadioBtn">
                   <property name="font">
                    <font>
                     <family>Calibri</family>
                     <pointsize>13</pointsize>
                    </font>
+                  </property>
+                  <property name="focusPolicy">
+                   <enum>Qt::ClickFocus</enum>
+                  </property>
+                  <property name="autoFillBackground">
+                   <bool>false</bool>
                   </property>
                   <property name="text">
                    <string>semicolon</string>
@@ -1043,12 +1061,18 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QRadioButton" name="radioButton_3">
+                 <widget class="QRadioButton" name="pipelineRadioBtn">
                   <property name="font">
                    <font>
                     <family>Calibri</family>
                     <pointsize>13</pointsize>
                    </font>
+                  </property>
+                  <property name="focusPolicy">
+                   <enum>Qt::ClickFocus</enum>
+                  </property>
+                  <property name="autoFillBackground">
+                   <bool>false</bool>
                   </property>
                   <property name="text">
                    <string>pipeline</string>
@@ -1056,12 +1080,18 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QRadioButton" name="radioButton_4">
+                 <widget class="QRadioButton" name="tebRadioBtn">
                   <property name="font">
                    <font>
                     <family>Calibri</family>
                     <pointsize>13</pointsize>
                    </font>
+                  </property>
+                  <property name="focusPolicy">
+                   <enum>Qt::ClickFocus</enum>
+                  </property>
+                  <property name="autoFillBackground">
+                   <bool>false</bool>
                   </property>
                   <property name="text">
                    <string>tab</string>
@@ -1072,9 +1102,9 @@
               </widget>
              </item>
              <item row="1" column="1">
-              <widget class="QGroupBox" name="groupBox_3">
+              <widget class="QGroupBox" name="generalBasicGroup">
                <property name="sizePolicy">
-                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
                  <horstretch>5</horstretch>
                  <verstretch>0</verstretch>
                 </sizepolicy>
@@ -1099,7 +1129,13 @@
                  <number>10</number>
                 </property>
                 <item row="2" column="0" alignment="Qt::AlignLeft">
-                 <widget class="QLabel" name="label">
+                 <widget class="QLabel" name="outFilenameLabel">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                    <horstretch>5</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
                   <property name="font">
                    <font>
                     <family>Calibri</family>
@@ -1113,7 +1149,13 @@
                  </widget>
                 </item>
                 <item row="2" column="1">
-                 <widget class="QLineEdit" name="lineEdit">
+                 <widget class="QLineEdit" name="outFilenameEntry">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                    <horstretch>5</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
                   <property name="maximumSize">
                    <size>
                     <width>300</width>
@@ -1127,27 +1169,66 @@
                     <italic>true</italic>
                    </font>
                   </property>
+                  <property name="mouseTracking">
+                   <bool>false</bool>
+                  </property>
+                  <property name="focusPolicy">
+                   <enum>Qt::ClickFocus</enum>
+                  </property>
                   <property name="inputMask">
-                   <string>file_out.csv</string>
+                   <string/>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="readOnly">
+                   <bool>false</bool>
+                  </property>
+                  <property name="placeholderText">
+                   <string>Write your output filename</string>
+                  </property>
+                  <property name="cursorMoveStyle">
+                   <enum>Qt::VisualMoveStyle</enum>
+                  </property>
+                  <property name="clearButtonEnabled">
+                   <bool>true</bool>
                   </property>
                  </widget>
                 </item>
                 <item row="5" column="0">
-                 <widget class="QCheckBox" name="checkBox">
+                 <widget class="QCheckBox" name="skipEmptyRowRadioBtn">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                    <horstretch>5</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
                   <property name="font">
                    <font>
                     <family>Calibri</family>
                     <pointsize>13</pointsize>
                     <bold>true</bold>
                    </font>
+                  </property>
+                  <property name="focusPolicy">
+                   <enum>Qt::ClickFocus</enum>
                   </property>
                   <property name="text">
                    <string>Skip righe vuote</string>
                   </property>
+                  <property name="checked">
+                   <bool>true</bool>
+                  </property>
                  </widget>
                 </item>
-                <item row="5" column="1" alignment="Qt::AlignRight">
-                 <widget class="QCheckBox" name="checkBox_2">
+                <item row="5" column="1" alignment="Qt::AlignLeft">
+                 <widget class="QCheckBox" name="trimAllColumnsRadioBtn">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                    <horstretch>5</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
                   <property name="font">
                    <font>
                     <family>Calibri</family>
@@ -1155,16 +1236,22 @@
                     <bold>true</bold>
                    </font>
                   </property>
+                  <property name="focusPolicy">
+                   <enum>Qt::ClickFocus</enum>
+                  </property>
                   <property name="text">
                    <string>Trim tutte le colonne</string>
+                  </property>
+                  <property name="checked">
+                   <bool>true</bool>
                   </property>
                  </widget>
                 </item>
                </layout>
               </widget>
              </item>
-             <item row="0" column="0">
-              <widget class="QPushButton" name="pushButton">
+             <item row="0" column="0" alignment="Qt::AlignLeft">
+              <widget class="QPushButton" name="basicSettingsBtn">
                <property name="font">
                 <font>
                  <family>Calibri</family>
@@ -1184,8 +1271,8 @@
                </property>
               </widget>
              </item>
-             <item row="2" column="1">
-              <widget class="QGroupBox" name="groupBox">
+             <item row="2" column="1" alignment="Qt::AlignBottom">
+              <widget class="QGroupBox" name="excelBasicGroup">
                <property name="sizePolicy">
                 <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                  <horstretch>5</horstretch>
@@ -1209,7 +1296,7 @@
                  <number>25</number>
                 </property>
                 <item>
-                 <widget class="QLabel" name="label_4">
+                 <widget class="QLabel" name="sheetnameLabel">
                   <property name="font">
                    <font>
                     <family>Calibri</family>
@@ -1223,7 +1310,7 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QLineEdit" name="lineEdit_2">
+                 <widget class="QLineEdit" name="sheetEntry">
                   <property name="maximumSize">
                    <size>
                     <width>16777215</width>
@@ -1237,13 +1324,121 @@
                     <italic>true</italic>
                    </font>
                   </property>
+                  <property name="focusPolicy">
+                   <enum>Qt::ClickFocus</enum>
+                  </property>
                   <property name="text">
-                   <string>Sheet1</string>
+                   <string/>
+                  </property>
+                  <property name="placeholderText">
+                   <string>Default : &quot;Sheet&quot;</string>
+                  </property>
+                  <property name="cursorMoveStyle">
+                   <enum>Qt::VisualMoveStyle</enum>
+                  </property>
+                  <property name="clearButtonEnabled">
+                   <bool>true</bool>
                   </property>
                  </widget>
                 </item>
                </layout>
               </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QFrame" name="runFrame">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>1</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::NoFrame</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_8">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <spacer name="horizontalSpacer_2">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>288</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+              <widget class="QPushButton" name="runBtn">
+               <property name="minimumSize">
+                <size>
+                 <width>180</width>
+                 <height>42</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <family>Calibri</family>
+                 <pointsize>20</pointsize>
+                 <italic>false</italic>
+                 <bold>false</bold>
+                 <underline>false</underline>
+                 <strikeout>false</strikeout>
+                 <kerning>true</kerning>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true"/>
+               </property>
+               <property name="text">
+                <string>RUN</string>
+               </property>
+               <property name="icon">
+                <iconset resource="../../resource.qrc">
+                 <normaloff>:/icons/icons/play.svg</normaloff>:/icons/icons/play.svg</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>24</width>
+                 <height>24</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>287</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
              </item>
             </layout>
            </widget>

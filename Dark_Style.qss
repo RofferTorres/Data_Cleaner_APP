@@ -20,6 +20,56 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
 
+#commaRadioBtn{
+	background-color: rgba(255, 255, 255, 0);
+
+}
+
+#delimiterLabel{
+	background-color: rgba(255, 255, 255, 0);
+
+}
+
+#pipelineRadioBtn{
+	background-color: rgba(255, 255, 255, 0);
+
+}
+
+#tebRadioBtn{
+	background-color: rgba(255, 255, 255, 0);
+
+}
+
+#semiclonRadioBtn{
+	background-color: rgba(255, 255, 255, 0);
+
+}
+
+#trimAllColumnsRadioBtn{
+	background-color: rgba(255, 255, 255, 0);
+
+}
+
+#skipEmptyRowRadioBtn{
+	background-color: rgba(255, 255, 255, 0);
+
+}
+
+#runBtn{
+    text-align: center;
+    border-radius: 8px;
+    margin-left: 10px;
+    background-color: qlineargradient(spread:reflect, x1:0, y1:1, x2:1, y2:0, stop:0 rgba(83, 240, 110, 145), stop:0.502463 rgba(27, 153, 47, 255), stop:1 rgba(83, 240, 110, 255));
+    background-color: qlineargradient(spread:reflect, x1:0, y1:1, x2:1, y2:0, stop:0 rgba(83, 240, 110, 120), stop:1 rgba(83, 240, 110, 255));
+}
+
+#runBtn:Hover{
+    background-color: rgba(83, 240, 110, 200);
+}
+
+#runBtn:pressed{
+    background-color: rgba(83, 240, 110, 180);
+}
 
 #dropBoxFrame{
 	border: 2px dashed #d0d1da;
@@ -261,10 +311,20 @@ QLineEdit
 {
 	background-color: #363636;
 	color : #eee;
-	border: 1px solid #343434;
-	border-radius : 2px;
+	border: 2px solid #363636;
+	border-radius : 3px;
 	padding: 2px;
 
+}
+
+QLineEdit:Hover
+{
+	border: 2px solid #3C3C3C;
+}
+
+QLineEdit:focus
+{
+	border: 3px solid #045F8B;
 }
 
 
@@ -272,7 +332,6 @@ QLineEdit
 QSpinBox,
 QDoubleSpinBox 
 {
-    background-color: #363636;
 	color : #eee;
 	border: 1px solid #343434;
 	padding: 2px;
