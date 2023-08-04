@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'data_tooleZEwtC.ui'
+## Form generated from reading UI file 'data_tool.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.5.1
 ##
@@ -339,9 +339,9 @@ class Ui_MainWindow(object):
         self.mainBodyContainer.setSizePolicy(sizePolicy2)
         self.mainBodyContainer.setMinimumSize(QSize(560, 0))
         self.verticalLayout_2 = QVBoxLayout(self.mainBodyContainer)
-        self.verticalLayout_2.setSpacing(45)
+        self.verticalLayout_2.setSpacing(25)
         self.verticalLayout_2.setObjectName(u"verticalLayout_2")
-        self.verticalLayout_2.setContentsMargins(45, 45, 45, 12)
+        self.verticalLayout_2.setContentsMargins(35, 35, 35, 12)
         self.dropBoxFrame = QFrame(self.mainBodyContainer)
         self.dropBoxFrame.setObjectName(u"dropBoxFrame")
         sizePolicy3 = QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
@@ -368,7 +368,7 @@ class Ui_MainWindow(object):
         self.uploadIcon.setPixmap(QPixmap(u":/icons/icons/uploadDocument.png"))
         self.uploadIcon.setScaledContents(True)
 
-        self.verticalLayout_3.addWidget(self.uploadIcon, 0, Qt.AlignHCenter|Qt.AlignBottom)
+        self.verticalLayout_3.addWidget(self.uploadIcon, 0, Qt.AlignHCenter|Qt.AlignVCenter)
 
         self.dragLabel = QLabel(self.dropBoxFrame)
         self.dragLabel.setObjectName(u"dragLabel")
@@ -382,15 +382,16 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_3.addWidget(self.dragLabel, 0, Qt.AlignHCenter|Qt.AlignVCenter)
 
-        self.browseFileLabel = QLabel(self.dropBoxFrame)
-        self.browseFileLabel.setObjectName(u"browseFileLabel")
+        self.browserFileLabel = QLabel(self.dropBoxFrame)
+        self.browserFileLabel.setObjectName(u"browserFileLabel")
         font7 = QFont()
         font7.setFamilies([u"Tahoma"])
         font7.setPointSize(16)
         font7.setItalic(True)
-        self.browseFileLabel.setFont(font7)
+        self.browserFileLabel.setFont(font7)
+        self.browserFileLabel.setOpenExternalLinks(True)
 
-        self.verticalLayout_3.addWidget(self.browseFileLabel, 0, Qt.AlignHCenter|Qt.AlignTop)
+        self.verticalLayout_3.addWidget(self.browserFileLabel, 0, Qt.AlignHCenter|Qt.AlignVCenter)
 
         self.verticalSpacer_2 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
 
@@ -652,7 +653,7 @@ class Ui_MainWindow(object):
         self.helpBtn.setText(QCoreApplication.translate("MainWindow", u"Aiuto", None))
         self.uploadIcon.setText("")
         self.dragLabel.setText(QCoreApplication.translate("MainWindow", u"Trascina e rilascia un .CSV", None))
-        self.browseFileLabel.setText(QCoreApplication.translate("MainWindow", u"Sfoglia sul tuo dispositivo", None))
+        self.browserFileLabel.setText(QCoreApplication.translate("MainWindow", u"Sfoglia sul tuo dispositivo", None))
         self.groupBox_2.setTitle(QCoreApplication.translate("MainWindow", u"CSV file", None))
         self.label_2.setText(QCoreApplication.translate("MainWindow", u"Delimitatore:", None))
         self.radioButton.setText(QCoreApplication.translate("MainWindow", u"comma", None))
@@ -661,13 +662,15 @@ class Ui_MainWindow(object):
         self.radioButton_4.setText(QCoreApplication.translate("MainWindow", u"tab", None))
         self.groupBox_3.setTitle(QCoreApplication.translate("MainWindow", u"General", None))
         self.label.setText(QCoreApplication.translate("MainWindow", u"Output filename:", None))
-        self.lineEdit.setInputMask(QCoreApplication.translate("MainWindow", u"file_out.csv", None))
+        self.lineEdit.setInputMask("")
+        self.lineEdit.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Default: 'filename_out.csv'", None))
         self.checkBox.setText(QCoreApplication.translate("MainWindow", u"Skip righe vuote", None))
         self.checkBox_2.setText(QCoreApplication.translate("MainWindow", u"Trim tutte le colonne", None))
         self.pushButton.setText(QCoreApplication.translate("MainWindow", u"Opzioni base", None))
         self.groupBox.setTitle(QCoreApplication.translate("MainWindow", u"Excel file", None))
         self.label_4.setText(QCoreApplication.translate("MainWindow", u"SheetName:", None))
-        self.lineEdit_2.setText(QCoreApplication.translate("MainWindow", u"Sheet1", None))
+        self.lineEdit_2.setText("")
+        self.lineEdit_2.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Default: 'sheet'", None))
         self.labelFooterLeft.setText(QCoreApplication.translate("MainWindow", u"Nessun file selezionato", None))
         self.labelFooterCenter.setText(QCoreApplication.translate("MainWindow", u"ENCODE: Default (UTF-8)", None))
         self.labelFooterRight.setText(QCoreApplication.translate("MainWindow", u"Status o notifiche ", None))

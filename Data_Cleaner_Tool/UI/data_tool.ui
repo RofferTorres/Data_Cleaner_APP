@@ -805,16 +805,16 @@
          </property>
          <layout class="QVBoxLayout" name="verticalLayout_2">
           <property name="spacing">
-           <number>45</number>
+           <number>25</number>
           </property>
           <property name="leftMargin">
-           <number>45</number>
+           <number>35</number>
           </property>
           <property name="topMargin">
-           <number>45</number>
+           <number>35</number>
           </property>
           <property name="rightMargin">
-           <number>45</number>
+           <number>35</number>
           </property>
           <property name="bottomMargin">
            <number>12</number>
@@ -862,7 +862,7 @@
                </property>
               </spacer>
              </item>
-             <item alignment="Qt::AlignHCenter|Qt::AlignBottom">
+             <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
               <widget class="QLabel" name="uploadIcon">
                <property name="minimumSize">
                 <size>
@@ -906,8 +906,8 @@
                </property>
               </widget>
              </item>
-             <item alignment="Qt::AlignHCenter|Qt::AlignTop">
-              <widget class="QLabel" name="browseFileLabel">
+             <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+              <widget class="QLabel" name="browserFileLabel">
                <property name="font">
                 <font>
                  <family>Tahoma</family>
@@ -917,6 +917,9 @@
                </property>
                <property name="text">
                 <string>Sfoglia sul tuo dispositivo</string>
+               </property>
+               <property name="openExternalLinks">
+                <bool>true</bool>
                </property>
               </widget>
              </item>
@@ -1128,7 +1131,10 @@
                    </font>
                   </property>
                   <property name="inputMask">
-                   <string>file_out.csv</string>
+                   <string/>
+                  </property>
+                  <property name="placeholderText">
+                   <string>Default: 'filename_out.csv'</string>
                   </property>
                  </widget>
                 </item>
@@ -1238,7 +1244,10 @@
                    </font>
                   </property>
                   <property name="text">
-                   <string>Sheet1</string>
+                   <string/>
+                  </property>
+                  <property name="placeholderText">
+                   <string>Default: 'sheet'</string>
                   </property>
                  </widget>
                 </item>
