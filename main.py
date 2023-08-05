@@ -63,7 +63,7 @@ class Data_Tool_Application(QMainWindow):
         self.ui.browserFileLabel.setStyleSheet("#browserFileLabel { color: #78A2F6; text-decoration: underline;}")
     
     
-    #Fuzioni spostamento della finestra
+    #Move windows function
     def mousePressEvent(self, event):
         if event.button() == Qt.MouseButton.LeftButton and self.ui.headerContainer.geometry().contains(event.position().toPoint()):
             self.oldPos = event.globalPosition().toPoint()
