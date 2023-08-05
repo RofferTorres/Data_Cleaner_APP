@@ -911,9 +911,16 @@
                <property name="font">
                 <font>
                  <family>Tahoma</family>
-                 <pointsize>16</pointsize>
-                 <italic>true</italic>
+                 <pointsize>14</pointsize>
+                 <italic>false</italic>
+                 <underline>false</underline>
                 </font>
+               </property>
+               <property name="cursor">
+                <cursorShape>PointingHandCursor</cursorShape>
+               </property>
+               <property name="mouseTracking">
+                <bool>true</bool>
                </property>
                <property name="text">
                 <string>Sfoglia sul tuo dispositivo</string>

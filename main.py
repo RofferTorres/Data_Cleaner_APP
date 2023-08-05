@@ -24,8 +24,12 @@ class Data_Tool_Application(QMainWindow):
         self.ui.restoreBtn.clicked.connect(self.toggleFullscreen)
 
         # Eventi hover per cambiare icone di sistema
-        self.ui.systemBtns.enterEvent = lambda event: self.hover_system_icons()
-        self.ui.systemBtns.leaveEvent = lambda event: self.reset_system_icons()
+        self.ui.systemBtns.enterEvent = lambda event: self.hoverSystemIcons()
+        self.ui.systemBtns.leaveEvent = lambda event: self.resetSystemIcons()
+        
+         # Eventi hover per cambiare underline dei file dialog link
+        self.ui.browserFileLabel.enterEvent = lambda event: self.fileDialogLinkHover()
+        self.ui.browserFileLabel.leaveEvent = lambda event: self.fileDialogLinkNormal()
 
         # Evento drag&Drop
         self.ui.dropBoxFrame.dragEnterEvent = lambda event: self.dragEnterEvent(event)
@@ -46,11 +50,19 @@ class Data_Tool_Application(QMainWindow):
         # FilePath attribute
         self.file_path = None
 
-        # Open File Dialog
-        self.ui.browserFileLabel.mousePressEvent = self.open_file_dialog
+        # Open File Dialog event
+        self.ui.browserFileLabel.mousePressEvent = lambda event: self.open_file_dialog(event)
 
         self.show()
-
+    
+    # Workaround function to show underline text on label:hover
+    def fileDialogLinkNormal(self):
+        self.ui.browserFileLabel.setStyleSheet("#browserFileLabel { color: #78A2F6; }")
+        
+    def fileDialogLinkHover(self):
+        self.ui.browserFileLabel.setStyleSheet("#browserFileLabel { color: #78A2F6; text-decoration: underline;}")
+    
+    
     #Fuzioni spostamento della finestra
     def mousePressEvent(self, event):
         if event.button() == Qt.MouseButton.LeftButton and self.ui.headerContainer.geometry().contains(event.position().toPoint()):
@@ -65,19 +77,18 @@ class Data_Tool_Application(QMainWindow):
     def mouseReleaseEvent(self, event):
         self.oldPos = None
 
-
     #Funzioni tasti di sistema
     def toggleFullscreen(self):
         if self.isFullScreen():
             self.showNormal()  # Ripristina la finestra al suo stato precedente
         else:
             self.showFullScreen()
-    def hover_system_icons(self):
+    def hoverSystemIcons(self):
         #print('enter')
         self.ui.closeBtn.setIcon(QIcon(u":/icons/icons/hover-closeIconMacOS.svg"))
         self.ui.minimizeBtn.setIcon(QIcon(u":/icons/icons/hover-minimizeIconMacOS.svg"))
         self.ui.restoreBtn.setIcon(QIcon(u":/icons/icons/hover-fullscreenIconMacOS.svg"))
-    def reset_system_icons(self):
+    def resetSystemIcons(self):
         #print('reset')
         self.ui.closeBtn.setIcon(QIcon(u":/icons/icons/closeIconMacOS.svg"))
         self.ui.minimizeBtn.setIcon(QIcon(u":/icons/icons/minimizeIconMacOS.svg"))
@@ -94,14 +105,14 @@ class Data_Tool_Application(QMainWindow):
 
         if urls:
             file_path = urls[0].toLocalFile()
-            print(file_path, len(file_path))
+            # print(file_path, len(file_path))
             self.dropUptLabels(file_path)
             self.updateStatus(file_path)
 
     # Aggiornamento barra di stato
     def updateStatus(self,input_file):
         # TODO: aggiungere labelFooterCentral e labelFooterLeft
-            if self.check_file_input(input_file):
+            if self.checkFileInput(input_file):
                 self.ui.labelFooterRight.setText(f'Ready')
             else:
                 self.ui.labelFooterRight.setText(f'Formato file non corretto')
@@ -125,16 +136,15 @@ class Data_Tool_Application(QMainWindow):
 
         # Truncate long paths
         while k > 50 and len(path_parts) > 4:
-            path = os.sep.join(path_parts[:len(file_path.split(os.sep)) - i]) + os.sep + '...' + os.sep + os.sep.join(
-                path_parts[-2:])
+            path = os.sep.join(path_parts[:len(file_path.split(os.sep)) - i]) + os.sep + '...' + os.sep + os.sep.join(path_parts[-2:])
             path_parts = path.split(os.sep)
             i = i + 1
             k = len(path)
         return path, path_parts
 
     # Controllo formato files di input
-    def check_file_input(self,file_path):
-        if file_path.endswith(('.txt','.csv','.tsv')):
+    def checkFileInput(self,file_path):
+        if file_path.endswith(('.txt','.csv','.tsv','.xls','.xlsx')):
             return True
         else:
             return False
@@ -149,7 +159,7 @@ class Data_Tool_Application(QMainWindow):
         else:
             newWidth = 155
             self.ui.MenuBtn.setIcon(QIcon(u":/icons/icons/chevrons-left.svg"))
-        # Animazione
+        # Animate Left Menubar
         self.animation = QPropertyAnimation(self.ui.leftMenuContainer, b'maximumWidth')
         self.animation.setDuration(750)
         self.animation.setStartValue(width)
@@ -161,14 +171,18 @@ class Data_Tool_Application(QMainWindow):
     def open_file_dialog(self, event):
         options = QFileDialog.Options()
         options |= QFileDialog.ReadOnly
+        # options |= QFileDialog.DontUseNativeDialog
+
 
         self.file_path, type_file = QFileDialog.getOpenFileName(
             self, "Select File", "", "CSV Files (*.csv);;Excel Files (*.xls *.xlsx);;Tutti i file (*)", options=options
         )
-        file_name, file_parts = self.truncatePath(self.file_path)
-        if file_name:
-            self.ui.dragLabel.setText(file_name)
-            self.uptFooterPath(file_name, file_parts)
+        file_path, file_parts = self.truncatePath(self.file_path)
+        if file_path:
+            self.ui.dragLabel.setText(file_path)
+            self.uptFooterPath(file_path, file_parts)
+            self.updateStatus(file_path)
+
 
 # Execute APP
 if __name__ == '__main__':

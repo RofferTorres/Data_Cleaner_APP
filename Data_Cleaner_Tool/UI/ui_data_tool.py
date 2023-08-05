@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'data_toolacyxkQ.ui'
+## Form generated from reading UI file 'data_toolMrjGgo.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.5.1
 ##
@@ -386,9 +386,12 @@ class Ui_MainWindow(object):
         self.browserFileLabel.setObjectName(u"browserFileLabel")
         font7 = QFont()
         font7.setFamilies([u"Tahoma"])
-        font7.setPointSize(16)
-        font7.setItalic(True)
+        font7.setPointSize(14)
+        font7.setItalic(False)
+        font7.setUnderline(False)
         self.browserFileLabel.setFont(font7)
+        self.browserFileLabel.setCursor(QCursor(Qt.PointingHandCursor))
+        self.browserFileLabel.setMouseTracking(True)
         self.browserFileLabel.setOpenExternalLinks(True)
 
         self.verticalLayout_3.addWidget(self.browserFileLabel, 0, Qt.AlignHCenter|Qt.AlignTop)
