@@ -907,7 +907,7 @@
               </widget>
              </item>
              <item alignment="Qt::AlignHCenter|Qt::AlignTop">
-              <widget class="QLabel" name="browseFileLabel">
+              <widget class="QLabel" name="browserFileLabel">
                <property name="font">
                 <font>
                  <family>Tahoma</family>
@@ -917,6 +917,9 @@
                </property>
                <property name="text">
                 <string>Sfoglia sul tuo dispositivo</string>
+               </property>
+               <property name="openExternalLinks">
+                <bool>true</bool>
                </property>
               </widget>
              </item>

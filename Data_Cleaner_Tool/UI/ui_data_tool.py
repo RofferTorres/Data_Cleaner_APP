@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'data_toolNTUoPG.ui'
+## Form generated from reading UI file 'data_toolacyxkQ.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.5.1
 ##
@@ -382,15 +382,16 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_3.addWidget(self.dragLabel, 0, Qt.AlignHCenter|Qt.AlignVCenter)
 
-        self.browseFileLabel = QLabel(self.dropBoxFrame)
-        self.browseFileLabel.setObjectName(u"browseFileLabel")
+        self.browserFileLabel = QLabel(self.dropBoxFrame)
+        self.browserFileLabel.setObjectName(u"browserFileLabel")
         font7 = QFont()
         font7.setFamilies([u"Tahoma"])
         font7.setPointSize(16)
         font7.setItalic(True)
-        self.browseFileLabel.setFont(font7)
+        self.browserFileLabel.setFont(font7)
+        self.browserFileLabel.setOpenExternalLinks(True)
 
-        self.verticalLayout_3.addWidget(self.browseFileLabel, 0, Qt.AlignHCenter|Qt.AlignTop)
+        self.verticalLayout_3.addWidget(self.browserFileLabel, 0, Qt.AlignHCenter|Qt.AlignTop)
 
         self.verticalSpacer_2 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
 
@@ -732,7 +733,7 @@ class Ui_MainWindow(object):
         self.helpBtn.setText(QCoreApplication.translate("MainWindow", u"Aiuto", None))
         self.uploadIcon.setText("")
         self.dragLabel.setText(QCoreApplication.translate("MainWindow", u"Trascina e rilascia un .CSV", None))
-        self.browseFileLabel.setText(QCoreApplication.translate("MainWindow", u"Sfoglia sul tuo dispositivo", None))
+        self.browserFileLabel.setText(QCoreApplication.translate("MainWindow", u"Sfoglia sul tuo dispositivo", None))
         self.csvBasicGroup.setTitle(QCoreApplication.translate("MainWindow", u"CSV file", None))
         self.delimiterLabel.setText(QCoreApplication.translate("MainWindow", u"Delimitatore:", None))
         self.commaRadioBtn.setText(QCoreApplication.translate("MainWindow", u"comma", None))

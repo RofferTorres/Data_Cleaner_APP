@@ -5,7 +5,7 @@ from pathlib import PurePath
 #import GUI file
 from PySide6.QtGui import (QDragEnterEvent, QDropEvent)
 from PySide6.QtCore import (QPropertyAnimation,QEasingCurve)
-from PySide6.QtWidgets import (QGraphicsDropShadowEffect)
+from PySide6.QtWidgets import (QFileDialog)
 from Data_Cleaner_Tool.UI.ui_data_tool import *
 
 #Classe principale
@@ -42,6 +42,12 @@ class Data_Tool_Application(QMainWindow):
 
         with open(stylesheet_path, 'r') as f:
             self.setStyleSheet(f.read())
+
+        # FilePath attribute
+        self.file_path = None
+
+        # Open File Dialog
+        self.ui.browserFileLabel.mousePressEvent = self.open_file_dialog
 
         self.show()
 
@@ -82,6 +88,7 @@ class Data_Tool_Application(QMainWindow):
         #print('drag event')
         if event.mimeData().hasUrls():
             event.acceptProposedAction()
+
     def dropEvent(self, event: QDropEvent):
         urls = event.mimeData().urls()
 
@@ -101,19 +108,29 @@ class Data_Tool_Application(QMainWindow):
 
     # Aggiornamento del label centrale ed una sezione del footer con una path non troppo lunga
     def dropUptLabels(self, file_path):
-        path = file_path
+        path, path_parts = self.truncatePath(file_path)
+
+        self.ui.dragLabel.setText(f"{path}")
+        self.uptFooterPath(path, path_parts)
+
+    def uptFooterPath(self, file_path, path_parts):
+        self.ui.labelFooterLeft.setText(
+            f'...{os.sep}{os.sep.join(path_parts[-1:])}  >  ...{os.sep}{PurePath(file_path).stem}_out.csv')
+
+    def truncatePath(self, file_path):
+        path = file_path.replace('/', os.sep)
         path_parts = path.split(os.sep)
         i = 2
         k = len(file_path)
 
-        while k> 50 and len(path_parts)>4:
-            path = os.sep.join(path_parts[:len(file_path.split(os.sep))-i])+os.sep+'...'+os.sep+os.sep.join(path_parts[-2:])
+        # Truncate long paths
+        while k > 50 and len(path_parts) > 4:
+            path = os.sep.join(path_parts[:len(file_path.split(os.sep)) - i]) + os.sep + '...' + os.sep + os.sep.join(
+                path_parts[-2:])
             path_parts = path.split(os.sep)
-            i = i+1
+            i = i + 1
             k = len(path)
-
-        self.ui.dragLabel.setText(f"{path}")
-        self.ui.labelFooterLeft.setText(f'...{os.sep}{os.sep.join(path_parts[-1:])}  >  ...{os.sep}{PurePath(file_path).stem}_out.csv')
+        return path, path_parts
 
     # Controllo formato files di input
     def check_file_input(self,file_path):
@@ -140,6 +157,18 @@ class Data_Tool_Application(QMainWindow):
         self.animation.setEasingCurve(QEasingCurve.InOutQuart)
         self.animation.start()
 
+    # Open file dialog function
+    def open_file_dialog(self, event):
+        options = QFileDialog.Options()
+        options |= QFileDialog.ReadOnly
+
+        self.file_path, type_file = QFileDialog.getOpenFileName(
+            self, "Select File", "", "CSV Files (*.csv);;Excel Files (*.xls *.xlsx);;Tutti i file (*)", options=options
+        )
+        file_name, file_parts = self.truncatePath(self.file_path)
+        if file_name:
+            self.ui.dragLabel.setText(file_name)
+            self.uptFooterPath(file_name, file_parts)
 
 # Execute APP
 if __name__ == '__main__':
