@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'data_toolMrjGgo.ui'
+## Form generated from reading UI file 'data_toolpNlcFH.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.5.1
 ##
@@ -178,7 +178,7 @@ class Ui_MainWindow(object):
         self.leftMenuContainer = QWidget(self.centralContainer)
         self.leftMenuContainer.setObjectName(u"leftMenuContainer")
         self.leftMenuContainer.setMinimumSize(QSize(0, 0))
-        self.leftMenuContainer.setMaximumSize(QSize(28, 16777215))
+        self.leftMenuContainer.setMaximumSize(QSize(30, 16777215))
         self.horizontalLayout_4 = QHBoxLayout(self.leftMenuContainer)
         self.horizontalLayout_4.setSpacing(0)
         self.horizontalLayout_4.setObjectName(u"horizontalLayout_4")
@@ -388,10 +388,9 @@ class Ui_MainWindow(object):
         font7.setFamilies([u"Tahoma"])
         font7.setPointSize(14)
         font7.setItalic(False)
-        font7.setUnderline(False)
+        font7.setUnderline(True)
         self.browserFileLabel.setFont(font7)
         self.browserFileLabel.setCursor(QCursor(Qt.PointingHandCursor))
-        self.browserFileLabel.setMouseTracking(True)
         self.browserFileLabel.setOpenExternalLinks(True)
 
         self.verticalLayout_3.addWidget(self.browserFileLabel, 0, Qt.AlignHCenter|Qt.AlignTop)
@@ -656,30 +655,54 @@ class Ui_MainWindow(object):
 
         self.footerContainer = QWidget(self.mainWidget)
         self.footerContainer.setObjectName(u"footerContainer")
-        self.horizontalLayout_3 = QHBoxLayout(self.footerContainer)
-        self.horizontalLayout_3.setSpacing(0)
+        self.horizontalLayout_9 = QHBoxLayout(self.footerContainer)
+        self.horizontalLayout_9.setSpacing(1)
+        self.horizontalLayout_9.setObjectName(u"horizontalLayout_9")
+        self.horizontalLayout_9.setContentsMargins(6, 4, 6, 6)
+        self.leftFooterFrame = QFrame(self.footerContainer)
+        self.leftFooterFrame.setObjectName(u"leftFooterFrame")
+        self.leftFooterFrame.setFrameShape(QFrame.NoFrame)
+        self.leftFooterFrame.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_3 = QHBoxLayout(self.leftFooterFrame)
+        self.horizontalLayout_3.setSpacing(2)
         self.horizontalLayout_3.setObjectName(u"horizontalLayout_3")
-        self.horizontalLayout_3.setContentsMargins(-1, 1, -1, 4)
-        self.labelFooterLeft = QLabel(self.footerContainer)
-        self.labelFooterLeft.setObjectName(u"labelFooterLeft")
+        self.horizontalLayout_3.setContentsMargins(0, 0, 0, 0)
+        self.iconLabelFooterLeft = QLabel(self.leftFooterFrame)
+        self.iconLabelFooterLeft.setObjectName(u"iconLabelFooterLeft")
+        self.iconLabelFooterLeft.setEnabled(True)
+        self.iconLabelFooterLeft.setMinimumSize(QSize(0, 0))
+        self.iconLabelFooterLeft.setMaximumSize(QSize(16, 16))
         font13 = QFont()
         font13.setFamilies([u"Calibri"])
         font13.setPointSize(10)
+        self.iconLabelFooterLeft.setFont(font13)
+        self.iconLabelFooterLeft.setContextMenuPolicy(Qt.NoContextMenu)
+        self.iconLabelFooterLeft.setPixmap(QPixmap(u":/icons/icons/file-text.svg"))
+        self.iconLabelFooterLeft.setScaledContents(True)
+        self.iconLabelFooterLeft.setAlignment(Qt.AlignCenter)
+
+        self.horizontalLayout_3.addWidget(self.iconLabelFooterLeft)
+
+        self.labelFooterLeft = QLabel(self.leftFooterFrame)
+        self.labelFooterLeft.setObjectName(u"labelFooterLeft")
         self.labelFooterLeft.setFont(font13)
 
-        self.horizontalLayout_3.addWidget(self.labelFooterLeft, 0, Qt.AlignLeft|Qt.AlignVCenter)
+        self.horizontalLayout_3.addWidget(self.labelFooterLeft)
+
+
+        self.horizontalLayout_9.addWidget(self.leftFooterFrame)
 
         self.labelFooterCenter = QLabel(self.footerContainer)
         self.labelFooterCenter.setObjectName(u"labelFooterCenter")
         self.labelFooterCenter.setFont(font13)
 
-        self.horizontalLayout_3.addWidget(self.labelFooterCenter, 0, Qt.AlignHCenter|Qt.AlignVCenter)
+        self.horizontalLayout_9.addWidget(self.labelFooterCenter, 0, Qt.AlignHCenter)
 
         self.labelFooterRight = QLabel(self.footerContainer)
         self.labelFooterRight.setObjectName(u"labelFooterRight")
         self.labelFooterRight.setFont(font13)
 
-        self.horizontalLayout_3.addWidget(self.labelFooterRight, 0, Qt.AlignRight|Qt.AlignVCenter)
+        self.horizontalLayout_9.addWidget(self.labelFooterRight, 0, Qt.AlignRight)
 
 
         self.verticalLayout_11.addWidget(self.footerContainer)
@@ -756,6 +779,7 @@ class Ui_MainWindow(object):
         self.sheetEntry.setText("")
         self.sheetEntry.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Default : \"Sheet\"", None))
         self.runBtn.setText(QCoreApplication.translate("MainWindow", u"RUN", None))
+        self.iconLabelFooterLeft.setText("")
         self.labelFooterLeft.setText(QCoreApplication.translate("MainWindow", u"Nessun file selezionato", None))
         self.labelFooterCenter.setText(QCoreApplication.translate("MainWindow", u"ENCODE: Default (UTF-8)", None))
         self.labelFooterRight.setText(QCoreApplication.translate("MainWindow", u"Status o notifiche ", None))

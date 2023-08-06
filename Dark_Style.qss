@@ -20,6 +20,10 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
 
+#homeBtn {
+    border-left: 3px solid #3573f0; border-radius: 0px
+}
+
 #browserFileLabel{
 	color: #78A2F6;
 }
@@ -203,6 +207,7 @@ QToolBar
 /*-----QPushButton-----*/
 QPushButton {
 	text-align: left;
+	border: 3px solid transparent;
     border-radius: 6px;
     margin-left: 3px;
 }
@@ -320,7 +325,7 @@ QLineEdit
 {
 	background-color: #363636;
 	color : #eee;
-	border: 2px solid #363636;
+	border: 3px solid transparent;
 	border-radius : 3px;
 	padding: 2px;
 
@@ -328,7 +333,7 @@ QLineEdit
 
 QLineEdit:Hover
 {
-	border: 2px solid #3C3C3C;
+	border: 3px solid #3C3C3C;
 }
 
 QLineEdit:focus

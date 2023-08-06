@@ -368,7 +368,7 @@
          </property>
          <property name="maximumSize">
           <size>
-           <width>28</width>
+           <width>30</width>
            <height>16777215</height>
           </size>
          </property>
@@ -913,14 +913,11 @@
                  <family>Tahoma</family>
                  <pointsize>14</pointsize>
                  <italic>false</italic>
-                 <underline>false</underline>
+                 <underline>true</underline>
                 </font>
                </property>
                <property name="cursor">
                 <cursorShape>PointingHandCursor</cursorShape>
-               </property>
-               <property name="mouseTracking">
-                <bool>true</bool>
                </property>
                <property name="text">
                 <string>Sfoglia sul tuo dispositivo</string>
@@ -1480,30 +1477,103 @@
     </item>
     <item>
      <widget class="QWidget" name="footerContainer" native="true">
-      <layout class="QHBoxLayout" name="horizontalLayout_3">
+      <layout class="QHBoxLayout" name="horizontalLayout_9">
        <property name="spacing">
-        <number>0</number>
-       </property>
-       <property name="topMargin">
         <number>1</number>
        </property>
-       <property name="bottomMargin">
+       <property name="leftMargin">
+        <number>6</number>
+       </property>
+       <property name="topMargin">
         <number>4</number>
        </property>
-       <item alignment="Qt::AlignLeft|Qt::AlignVCenter">
-        <widget class="QLabel" name="labelFooterLeft">
-         <property name="font">
-          <font>
-           <family>Calibri</family>
-           <pointsize>10</pointsize>
-          </font>
+       <property name="rightMargin">
+        <number>6</number>
+       </property>
+       <property name="bottomMargin">
+        <number>6</number>
+       </property>
+       <item>
+        <widget class="QFrame" name="leftFooterFrame">
+         <property name="frameShape">
+          <enum>QFrame::NoFrame</enum>
          </property>
-         <property name="text">
-          <string>Nessun file selezionato</string>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
          </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <property name="spacing">
+           <number>2</number>
+          </property>
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QLabel" name="iconLabelFooterLeft">
+            <property name="enabled">
+             <bool>true</bool>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16</width>
+              <height>16</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>Calibri</family>
+              <pointsize>10</pointsize>
+             </font>
+            </property>
+            <property name="contextMenuPolicy">
+             <enum>Qt::NoContextMenu</enum>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="pixmap">
+             <pixmap resource="../../resource.qrc">:/icons/icons/file-text.svg</pixmap>
+            </property>
+            <property name="scaledContents">
+             <bool>true</bool>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="labelFooterLeft">
+            <property name="font">
+             <font>
+              <family>Calibri</family>
+              <pointsize>10</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>Nessun file selezionato</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
         </widget>
        </item>
-       <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+       <item alignment="Qt::AlignHCenter">
         <widget class="QLabel" name="labelFooterCenter">
          <property name="font">
           <font>
@@ -1516,7 +1586,7 @@
          </property>
         </widget>
        </item>
-       <item alignment="Qt::AlignRight|Qt::AlignVCenter">
+       <item alignment="Qt::AlignRight">
         <widget class="QLabel" name="labelFooterRight">
          <property name="font">
           <font>
